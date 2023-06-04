@@ -10,7 +10,7 @@
 
 get_header(); ?>
 
-	<main id="content" class="<?php echo odin_classes_page_full(); ?>" tabindex="-1" role="main">
+	<main tabindex="-1" role="main">
 
 			<?php
 				while ( have_posts() ) : the_post();
@@ -21,6 +21,5 @@ get_header(); ?>
 			?>
 
 	</main>
-
 <?php
 get_footer();

@@ -9,10 +9,6 @@
  * @since 2.2.0
  */
 ?>
-
-		</div>
-	</div>
-
 	<section>
 		<div class="container">
 			<div class="row">
@@ -43,6 +39,8 @@
 				</div>
 				<div class="col-12 col-md-3">
 					<h3>Redes Sociais</h3>
+    				<?php $odin_contact_opts = get_option( 'odin_contact' ); ?>
+					<p><?php echo $odin_contact_opts['odin_telefone']; ?></p>
 				</div>
 			</div>
 		</div>

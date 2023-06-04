@@ -17,6 +17,12 @@
 	<?php if ( ! get_option( 'site_icon' ) ) : ?>
 		<link href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.ico" rel="shortcut icon" />
 	<?php endif; ?>
+	<?php $odin_colors_opts = get_option( 'odin_colors' ); ?>
+	<style>
+		:root{
+			--background-color: <?php echo $odin_colors_opts['background_color']; ?>;
+		}
+	</style>
 	<?php wp_head(); ?>
 </head>
 
@@ -158,6 +164,3 @@
 			</div>
 		</div>
 	</header>
-
-	<div id="wrapper" class="container">
-		<div class="row">

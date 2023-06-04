@@ -237,24 +237,30 @@ function odin_enqueue_scripts() {
 	wp_enqueue_style( 'odin-style', get_stylesheet_uri(), array(), null, 'all' );
 
 	//custom css
-	wp_enqueue_style( 'custom-style', $template_url . '/assets/css/custom.css', array(), null, 'all' );
+	wp_enqueue_style( 'custom-style', $template_url . '/assets/css/custom.css');
+
+	//Owl Css
+	wp_enqueue_style( 'owl-css', $template_url . '/assets/css/owl.carousel.min.css');
+	wp_enqueue_style( 'owl-theme', $template_url . '/assets/css/owl.theme.carousel.min.css');
+
+	// OWL JS.
+	wp_enqueue_script( 'owl-js', $template_url . '/assets/js/libs/owl.carousel.min.js', array( 'jquery-att' ), null, false);
 
 	// Html5Shiv
 	wp_enqueue_script( 'html5shiv', $template_url . '/assets/js/html5.js' );
 	wp_script_add_data( 'html5shiv', 'conditional', 'lt IE 9' );
 
+	// Bootstrap.
+	wp_enqueue_script( 'bootstrap', $template_url . '/assets/js/libs/bootstrap.min.js', array( 'jquery' ), null, true );
+
+	// Jquery.
+	wp_enqueue_script( 'jquery-att', $template_url . '/assets/js/libs/jquery.min.js', array(), null, false );
+	
 	// General scripts.
 	if ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
-		// Bootstrap.
-		wp_enqueue_script( 'bootstrap', $template_url . '/assets/js/libs/bootstrap.min.js', array( 'jquery' ), null, true );
-
 		// FitVids.
 		wp_enqueue_script( 'fitvids', $template_url . '/assets/js/libs/jquery.fitvids.js', array( 'jquery' ), null, true );
 
-		// OWL JS.
-		wp_enqueue_script( 'owl', $template_url . '/assets/js/libs/owl.carousel.min.js', array( 'jquery' ), null, true );
-		wp_enqueue_style( 'owl', $template_url . '/assets/css/owl.carousel.min.css', array( 'jquery' ), null, true );
-		wp_enqueue_style( 'owl', $template_url . '/assets/css/owl.theme.carousel.min.css', array( 'jquery' ), null, true );
 		// Main.
 		wp_enqueue_script( 'odin-main', $template_url . '/assets/js/main.js', array( 'jquery' ), null, true );
 	} else {
