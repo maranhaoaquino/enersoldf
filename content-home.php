@@ -22,7 +22,7 @@
                     <div class="owl-carousel owl-theme slide--card">
                         <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
                             <div class="item">
-                                <?php include(TEMPLATEPATH . "/snippets/card-servico.php"); ?>
+                                <?php include(TEMPLATEPATH . "/snippets/card.php"); ?>
                             </div>
                         <?php endwhile; else: endif; ?>
                         <?php wp_reset_query(); wp_reset_postdata(); ?>
@@ -54,7 +54,7 @@
                     <div class="owl-carousel owl-theme slide--card">
                         <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
                             <div class="item">
-                                <?php include(TEMPLATEPATH . "/snippets/card-product.php"); ?>
+                                <?php include(TEMPLATEPATH . "/snippets/card.php"); ?>
                             </div>
                         <?php endwhile; else: endif; ?>
                         <?php wp_reset_query(); wp_reset_postdata(); ?>

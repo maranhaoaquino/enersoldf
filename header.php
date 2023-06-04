@@ -21,6 +21,20 @@
 	<style>
 		:root{
 			--background-color: <?php echo $odin_colors_opts['background_color']; ?>;
+			--background-header-color: <?php echo $odin_colors_opts['background_header_color']; ?>;
+			--background-footer-color: <?php echo $odin_colors_opts['background_footer_color']; ?>;
+			--primary-color: <?php echo $odin_colors_opts['primary_color']; ?>;
+			--primary-bold-color: <?php echo $odin_colors_opts['primary_bold_color']; ?>;
+			--primary-light-color: <?php echo $odin_colors_opts['primary_light_color']; ?>;
+			--secondary-color: <?php echo $odin_colors_opts['secondary_color']; ?>;
+			--secondary-bold-color: <?php echo $odin_colors_opts['secondary_bold_color']; ?>;
+			--secondary-light-color: <?php echo $odin_colors_opts['secondary_light_color']; ?>;
+			--title-color: <?php echo $odin_colors_opts['title_color']; ?>;
+			--text-color: <?php echo $odin_colors_opts['text_color']; ?>;
+			--link-color: <?php echo $odin_colors_opts['link_color']; ?>;
+			--link-hover-color: <?php echo $odin_colors_opts['link_hover_color']; ?>;
+			--link-contrast-color: <?php echo $odin_colors_opts['link_color']; ?>;
+			--link-contrast-hover-color: <?php echo $odin_colors_opts['link_hover_color']; ?>;
 		}
 	</style>
 	<?php wp_head(); ?>

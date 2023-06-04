@@ -459,44 +459,109 @@ if (!function_exists( 'odin_theme_settings' ) ){
 				'title' => __( 'Cores do tema', 'odin' ),
 				'fields' => array(
                     array(
-                        'id'          => 'background_color', // Required
-                        'label'       => __( 'Background Color', 'odin' ), // Required
-                        'type'        => 'color', // Required
-                        // 'attributes' => array(), // Optional (html input elements)
-                        'default'     => '#f4f4f4', // Optional (color in hex)
-                        'description' => __( 'Cor do fundo do tema', 'odin' ), // Optional
+                        'id'          => 'background_color',
+                        'label'       => __( 'Background Color', 'odin' ),
+                        'type'        => 'color',
+                        'default'     => '#f4f4f4',
+                        'description' => __( 'Cor do fundo do tema', 'odin' ),
                     ),
 					array(
-                        'id'          => 'primary_color', // Required
-                        'label'       => __( 'Primary Color', 'odin' ), // Required
-                        'type'        => 'color', // Required
-                        // 'attributes' => array(), // Optional (html input elements)
-                        'default'     => '#263882', // Optional (color in hex)
-                        'description' => __( 'Cor primaria do tema', 'odin' ), // Optional
+                        'id'          => 'background_header_color',
+                        'label'       => __( 'Background Header Color', 'odin' ),
+                        'type'        => 'color',
+                        'default'     => '#263882',
+                        'description' => __( 'Cor do fundo do header', 'odin' ),
                     ),
 					array(
-                        'id'          => 'secondary_color', // Required
-                        'label'       => __( 'Secondary Color', 'odin' ), // Required
-                        'type'        => 'color', // Required
-                        // 'attributes' => array(), // Optional (html input elements)
-                        'default'     => '#fec208', // Optional (color in hex)
-                        'description' => __( 'Cor secundaria do tema', 'odin' ), // Optional
+                        'id'          => 'background_footer_color',
+                        'label'       => __( 'Background Footer Color', 'odin' ),
+                        'type'        => 'color',
+                        'default'     => '#263882',
+                        'description' => __( 'Cor do fundo do header', 'odin' ),
                     ),
 					array(
-                        'id'          => 'title_color', // Required
-                        'label'       => __( 'Title Color', 'odin' ), // Required
-                        'type'        => 'color', // Required
-                        // 'attributes' => array(), // Optional (html input elements)
-                        'default'     => '#000000', // Optional (color in hex)
-                        'description' => __( 'Cor dos titulos', 'odin' ), // Optional
+                        'id'          => 'primary_color',
+                        'label'       => __( 'Primary Color', 'odin' ),
+                        'type'        => 'color',
+                        'default'     => '#263882',
+                        'description' => __( 'Cor primaria do tema', 'odin' ),
                     ),
 					array(
-                        'id'          => 'text_color', // Required
-                        'label'       => __( 'Text Color', 'odin' ), // Required
-                        'type'        => 'color', // Required
-                        // 'attributes' => array(), // Optional (html input elements)
-                        'default'     => '#000000', // Optional (color in hex)
-                        'description' => __( 'Cor dos textos', 'odin' ), // Optional
+                        'id'          => 'primary_bold_color',
+                        'label'       => __( 'Primary Color Bold', 'odin' ),
+                        'type'        => 'color',
+                        'default'     => '#162870',
+                        'description' => __( 'Cor primaria escura do tema', 'odin' ),
+                    ),
+					array(
+                        'id'          => 'primary_light_color',
+                        'label'       => __( 'Primary Color Light', 'odin' ),
+                        'type'        => 'color',
+                        'default'     => '#00479B',
+                        'description' => __( 'Cor primaria clara do tema', 'odin' ),
+                    ),
+					array(
+                        'id'          => 'secondary_color',
+                        'label'       => __( 'Secondary Color', 'odin' ),
+                        'type'        => 'color',
+                        'default'     => '#fec208',
+                        'description' => __( 'Cor secundaria do tema', 'odin' ),
+                    ),
+					array(
+                        'id'          => 'secondary_bold_color',
+                        'label'       => __( 'Secondary Color Bold', 'odin' ),
+                        'type'        => 'color',
+                        'default'     => '#FE9F03',
+                        'description' => __( 'Cor secundaria escura do tema', 'odin' ),
+                    ),
+					array(
+                        'id'          => 'secondary_light_color',
+                        'label'       => __( 'Secondary Color Light', 'odin' ),
+                        'type'        => 'color',
+                        'default'     => '#FDD453',
+                        'description' => __( 'Cor secundaria clara do tema', 'odin' ),
+                    ),
+					array(
+                        'id'          => 'title_color',
+                        'label'       => __( 'Title Color', 'odin' ),
+                        'type'        => 'color',
+                        'default'     => '#000000',
+                        'description' => __( 'Cor dos titulos', 'odin' ),
+                    ),
+					array(
+                        'id'          => 'text_color',
+                        'label'       => __( 'Text Color', 'odin' ),
+                        'type'        => 'color',
+                        'default'     => '#000000',
+                        'description' => __( 'Cor dos textos', 'odin' ),
+                    ),
+					array(
+                        'id'          => 'link_color',
+                        'label'       => __( 'Link Color', 'odin' ),
+                        'type'        => 'color',
+                        'default'     => '#000000',
+                        'description' => __( 'Cor dos Links', 'odin' ),
+                    ),
+					array(
+                        'id'          => 'link_hover_color',
+                        'label'       => __( 'Link Hover Color', 'odin' ),
+                        'type'        => 'color',
+                        'default'     => '#000000',
+                        'description' => __( 'Cor dos Links Clicados', 'odin' ),
+                    ),
+					array(
+                        'id'          => 'link_contrast_color',
+                        'label'       => __( 'Link Contrast Color', 'odin' ),
+                        'type'        => 'color',
+                        'default'     => '#ffffff',
+                        'description' => __( 'Cor dos Links em fundo colorido', 'odin' ),
+                    ),
+					array(
+                        'id'          => 'link_contrast_hover_color',
+                        'label'       => __( 'Link Hover Color', 'odin' ),
+                        'type'        => 'color',
+                        'default'     => '#cccccc',
+                        'description' => __( 'Cor dos Links Clicados em fundo colorido', 'odin' ),
                     ),
 				)
 			)

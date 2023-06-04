@@ -1,3 +1,37 @@
+/*Configurações gerais*/
 body{
     background-color: var(--background-color);
+    color: var(--text-color);
+}
+h1,h2,h3,h4,h5,h6 {
+    color: var(--title-color);
+}
+p{
+    color: var(--text-color);
+}
+
+/*Header*/
+header{
+    background-color: var(--background-header-color);
+}
+
+/*Home*/
+#produtos{
+    background-color: var(--primary-color);
+}
+
+#faq{
+    background: linear-gradient(180deg, var(--primary-light-color), var(--primary-color));
+}
+
+/*Footer*/
+#orcamento{
+    background-color: var(--primary-light-color);
+}
+footer{
+    background-color: var(--background-footer-color);
+}
+#powered-by{
+    background-color: #0D1533;
+    color: #fff;
 }
