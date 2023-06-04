@@ -20,6 +20,21 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 600;
 }
 
+// carrega os campos personalizados do CMB2
+require_once get_template_directory() . '/cmb2/load.php';
+
+// Funções para Limpar o Header
+remove_action('wp_head', 'rsd_link');
+remove_action('wp_head', 'wlwmanifest_link');
+remove_action('wp_head', 'start_post_rel_link', 10, 0 );
+remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
+remove_action('wp_head', 'feed_links_extra', 3);
+remove_action('wp_head', 'wp_generator');
+remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('admin_print_scripts', 'print_emoji_detection_script');
+remove_action('wp_print_styles', 'print_emoji_styles');
+remove_action('admin_print_styles', 'print_emoji_styles');
+
 /**
  * Odin Classes.
  */
@@ -36,7 +51,7 @@ require_once get_template_directory() . '/core/classes/class-metabox.php';
 // require_once get_template_directory() . '/core/classes/class-post-form.php';
 // require_once get_template_directory() . '/core/classes/class-user-meta.php';
 // require_once get_template_directory() . '/core/classes/class-post-status.php';
-//require_once get_template_directory() . '/core/classes/class-term-meta.php';
+require_once get_template_directory() . '/core/classes/class-term-meta.php';
 
 /**
  * Odin Widgets.
@@ -221,6 +236,9 @@ function odin_enqueue_scripts() {
 	// Loads Odin main stylesheet.
 	wp_enqueue_style( 'odin-style', get_stylesheet_uri(), array(), null, 'all' );
 
+	//custom css
+	wp_enqueue_style( 'custom-style', $template_url . '/assets/css/custom.css', array(), null, 'all' );
+
 	// Html5Shiv
 	wp_enqueue_script( 'html5shiv', $template_url . '/assets/js/html5.js' );
 	wp_script_add_data( 'html5shiv', 'conditional', 'lt IE 9' );
@@ -233,6 +251,10 @@ function odin_enqueue_scripts() {
 		// FitVids.
 		wp_enqueue_script( 'fitvids', $template_url . '/assets/js/libs/jquery.fitvids.js', array( 'jquery' ), null, true );
 
+		// OWL JS.
+		wp_enqueue_script( 'owl', $template_url . '/assets/js/libs/owl.carousel.min.js', array( 'jquery' ), null, true );
+		wp_enqueue_style( 'owl', $template_url . '/assets/css/owl.carousel.min.css', array( 'jquery' ), null, true );
+		wp_enqueue_style( 'owl', $template_url . '/assets/css/owl.theme.carousel.min.css', array( 'jquery' ), null, true );
 		// Main.
 		wp_enqueue_script( 'odin-main', $template_url . '/assets/js/main.js', array( 'jquery' ), null, true );
 	} else {

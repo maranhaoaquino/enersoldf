@@ -32,30 +32,27 @@
 		</div>
 	</a>
 
-	<header id="header" role="banner">
+	<header id="header" role="banner" class="d-none d-md-block">
 		<div class="container">
 			<div class="row">
-				<div class="col-6">
+				<div class="col-3">
 					<div class="page-header hidden-xs">
-						<?php odin_the_custom_logo(); ?>
-
-						<?php if ( is_home() ) : ?>
+						<?php if(has_custom_logo()){ ?>
+							<?php odin_the_custom_logo(); ?>
+							<h1 class="site-title d-none">
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+									<?php bloginfo( 'name' ); ?>
+								</a>
+							</h1>
+							<h2 class="site-description d-none"><?php bloginfo( 'description' ); ?></h2>
+						<?php } else { ?>
 							<h1 class="site-title">
 								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 									<?php bloginfo( 'name' ); ?>
 								</a>
 							</h1>
 							<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-						<?php else : ?>
-							<div class="site-title h1">
-								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-									<?php bloginfo( 'name' ); ?>
-								</a>
-							</div>
-							<div class="site-description h2">
-								<?php bloginfo( 'description' ); ?>
-							</div>
-						<?php endif ?>
+						<?php } ?>
 
 						<?php if ( get_header_image() ) : ?>
 							<div class="custom-header">
@@ -64,7 +61,60 @@
 								</a>
 							</div>
 						<?php endif; ?>
+					</div>
+				</div>
+				<div class="col-9">
+					<div id="main-navigation" class="navbar navbar-default">
+						<nav class="nav" role="navigation">
+							<?php
+								wp_nav_menu(
+									array(
+										'theme_location' => 'main-menu',
+										'depth'          => 2,
+										'container'      => false,
+										'menu_class'     => 'nav',
+										'fallback_cb'    => 'Odin_Bootstrap_Nav_Walker::fallback',
+										'walker'         => new Odin_Bootstrap_Nav_Walker()
+									)
+								);
+							?>
+							<a>Orçamento</a>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
 
+	<header id="header-mobile" class="d-block d-md-none">
+		<div class="container">
+			<div class="row">
+				<div class="col-6">
+					<div class="page-header hidden-xs">
+						<?php if(has_custom_logo()){ ?>
+							<?php odin_the_custom_logo(); ?>
+							<h1 class="site-title d-none">
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+									<?php bloginfo( 'name' ); ?>
+								</a>
+							</h1>
+							<h2 class="site-description d-none"><?php bloginfo( 'description' ); ?></h2>
+						<?php } else { ?>
+							<h1 class="site-title">
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+									<?php bloginfo( 'name' ); ?>
+								</a>
+							</h1>
+							<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+						<?php } ?>
+
+						<?php if ( get_header_image() ) : ?>
+							<div class="custom-header">
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+									<img src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
+								</a>
+							</div>
+						<?php endif; ?>
 					</div>
 				</div>
 				<div class="col-6">
@@ -102,7 +152,7 @@
 								</div>
 								<button type="submit" class="btn btn-default"><?php _e( 'Search', 'odin' ); ?></button>
 							</form>
-						</nav><!-- .navbar-collapse -->
+						</nav>
 					</div>
 				</div>
 			</div>
