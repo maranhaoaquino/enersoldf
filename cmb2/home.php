@@ -29,6 +29,9 @@ function cmb2_fields_home() {
         'name' => 'Image',
         'id' => 'img_slide',
         'type' => 'file',
+        'options' => [
+            'url' => false,
+        ],
     ]);
     $cmb->add_group_field($slide_principal, [
         'name' => 'Link do video',
@@ -49,5 +52,45 @@ function cmb2_fields_home() {
         'name' => 'Link',
         'id' => 'link_slide',
         'type' => 'text_url',
+    ]);
+
+    $cmb->add_field([
+        'name' => 'Imagem Sessão Vantagens',
+        'id' => 'img_vantagens',
+        'type' => 'file',
+        'options' => [
+            'url' => false,
+        ],
+    ]);
+
+    $vantagens = $cmb->add_field([
+        'name' => 'Vantagens',
+        'id' => 'vantagens',
+        'type' => 'group',
+        'repeatable' => true,
+        'options' => [
+          'sortable' => true,
+          'add_button' => 'Adicionar',
+          'remove_button' => 'Remover',
+        ],
+    ]);
+
+    $cmb->add_group_field($vantagens, [
+        'name' => 'Image',
+        'id' => 'img_vantagem',
+        'type' => 'file',
+        'options' => [
+            'url' => false,
+        ],
+    ]);
+    $cmb->add_group_field($vantagens, [
+        'name' => 'Titulo',
+        'id' => 'title_vantagem',
+        'type' => 'text',
+    ]);
+    $cmb->add_group_field($vantagens, [
+        'name' => 'Descrição',
+        'id' => 'description_vantagem',
+        'type' => 'textarea_small'
     ]);
 }
