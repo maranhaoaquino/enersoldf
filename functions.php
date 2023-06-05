@@ -246,6 +246,12 @@ function odin_enqueue_scripts() {
 	// OWL JS.
 	wp_enqueue_script( 'owl-js', $template_url . '/assets/js/libs/owl.carousel.min.js', array( 'jquery-att' ), null, false);
 
+	//xZoom css
+	wp_enqueue_style( 'xzoom-css', $template_url . '/assets/css/xzoom.min.css');
+
+	// xZoom js
+	wp_enqueue_script( 'xzoom-js', $template_url . '/assets/js/libs/xzoom.min.js', array( 'jquery-att' ), null, false);
+	
 	// Html5Shiv
 	wp_enqueue_script( 'html5shiv', $template_url . '/assets/js/html5.js' );
 	wp_script_add_data( 'html5shiv', 'conditional', 'lt IE 9' );
