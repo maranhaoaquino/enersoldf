@@ -29,6 +29,9 @@
                     </div>
                 </div>
             </div>
+            <div class="col-12">
+                <a href="/categoria-produtos/todos-produtos/">Conheça nossos serviços</a>
+            </div>
         </div>
     </div>
 </section>
@@ -61,6 +64,9 @@
                     </div>
                 </div>
             </div>
+            <div class="col-12">
+                <a href="/categoria-servico/todos-servicos/">Veja todos os produtos</a>
+            </div>
         </div>
     </div>
 </section>
@@ -74,13 +80,25 @@
         </div>
     </div>
 </section>
-<section id="faq" class="py-5">
+<section id="faq-home" class="py-5">
+    <?php $faq = get_page_by_path('perguntas-frequentes')->ID; ?>
     <div class="container">
         <div class="row">
-            <div class="col-12 col-md-4"></div>
+            <div class="col-12 col-md-4">
+                <img  src="<?php the_field_cmb2('imagem_faq', $faq) ?>">
+            </div>
             <div class="col-12 col-md-8">
                 <span>Tire suas duvidas</span>
                 <h2>Perguntas Frequentes</h2>
+                <?php $faq = get_field_cmb2('faq', $faq); ?>
+                <div id="faq-box">
+                    <?php foreach($faq as $pergunta) { ?>
+                        <details>
+                            <summary><?php echo $pergunta['pergunta_faq'] ?></summary>
+                            <p><?php echo $pergunta['resposta_faq'] ?></p>
+                        </details>
+                    <?php } ?>
+                </div>
             </div>
         </div>
     </div>

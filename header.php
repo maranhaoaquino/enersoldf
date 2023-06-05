@@ -52,7 +52,7 @@
 		</div>
 	</a>
 
-	<header id="header" role="banner" class="d-none d-md-block">
+	<header id="header" role="banner" class="d-none d-md-block py-3">
 		<div class="container">
 			<div class="row">
 				<div class="col-3">
@@ -83,16 +83,16 @@
 						<?php endif; ?>
 					</div>
 				</div>
-				<div class="col-9">
+				<div class="d-flex col-9 align-items-center justify-content-end">
 					<div id="main-navigation" class="navbar navbar-default">
-						<nav class="nav" role="navigation">
+						<nav class="nav gap-3" role="navigation">
 							<?php
 								wp_nav_menu(
 									array(
 										'theme_location' => 'main-menu',
 										'depth'          => 2,
 										'container'      => false,
-										'menu_class'     => 'nav',
+										'menu_class'     => 'nav gap-3',
 										'fallback_cb'    => 'Odin_Bootstrap_Nav_Walker::fallback',
 										'walker'         => new Odin_Bootstrap_Nav_Walker()
 									)

@@ -9,7 +9,7 @@
  * @since 2.2.0
  */
 ?>
-	<section id="orcamento">
+	<section id="orcamento" class="py-5">
 		<div class="container">
 			<div class="row">
 				<div class="col-12 col-md-6">
@@ -20,7 +20,7 @@
 		</div>
 	</section>
 
-	<footer id="footer" role="contentinfo">
+	<footer id="footer" class="py-5" role="contentinfo">
 		<div class="container">
 			<div class="row">
 				<div class="col-12 col-md-4">
