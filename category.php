@@ -10,16 +10,20 @@
 
 get_header(); ?>
 
-	<main id="content" class="<?php echo odin_classes_page_sidebar(); ?>" tabindex="-1" role="main">
+	<main tabindex="-1" role="main">
 
 			<?php if ( have_posts() ) : ?>
 
-				<header class="page-header">
-				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="taxonomy-description">', '</div>' );
-				?>
-				</header><!-- .page-header -->
+				<section class="container mt-5">
+					<div class="row">
+						<div class="col-12 text-center">
+							<h1><?php single_term_title(); ?></h1>
+						</div>
+						<div class="col-12 text-center">
+							<?php echo term_description(); ?>
+						</div>
+					</div>
+				</section>
 
 				<?php
 						// Start the Loop.
@@ -30,7 +34,7 @@ get_header(); ?>
 						 * use this in a child theme, then include a file called content-___.php
 						 * (where ___ is the post format) and that will be used instead.
 						 */
-						get_template_part( 'content', get_post_format() );
+						get_template_part( 'content', 'category' );
 
 						endwhile;
 
@@ -43,8 +47,7 @@ get_header(); ?>
 
 				endif;
 			?>
-	</main><!-- #main -->
+	</main>
 
 <?php
-get_sidebar();
 get_footer();

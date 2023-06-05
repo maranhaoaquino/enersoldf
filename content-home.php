@@ -137,7 +137,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-4">
-                <img  src="<?php the_field_cmb2('imagem_faq', $faq) ?>">
+                <img  src="<?php the_field_cmb2('imagem_faq', $perguntas) ?>">
             </div>
             <div class="col-12 col-md-8">
                 <span>Tire suas duvidas</span>
