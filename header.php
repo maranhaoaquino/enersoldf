@@ -108,7 +108,10 @@
 									)
 								);
 							?>
-							<a>Orçamento</a>
+							<?php $odin_contact_opts = get_option( 'odin_contact' ); ?>
+							<a href="<?php echo $odin_contact_opts['odin_whatsapp']; ?>">
+								Orçamento <ion-icon name="logo-whatsapp"></ion-icon>
+							</a>
 						</nav>
 					</div>
 				</div>

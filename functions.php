@@ -364,8 +364,8 @@ if (!function_exists( 'odin_theme_settings' ) ){
 	$settings->set_tabs(
         array(
             array(
-                'id' => 'odin_general', // Slug/ID of the Settings tab (Required)
-                'title' => __( 'Configurações Gerais', 'odin' ), // Settings tab title (Required)
+                'id' => 'odin_general',
+                'title' => __( 'Configurações Gerais', 'odin' ),
             ),
 			array(
                 'id' => 'odin_contact',

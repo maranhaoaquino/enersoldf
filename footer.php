@@ -40,11 +40,28 @@
 				</div>
 				<div class="col-12 col-md-3">
 					<h3>Informações</h3>
+					<ul id="informacoes-contato">
+						<?php $odin_contact_opts = get_option( 'odin_contact' ); ?>
+						<li><ion-icon name="call-outline"></ion-icon><?php echo $odin_contact_opts['odin_telefone']; ?> | <ion-icon name="logo-whatsapp"></ion-icon><?php echo $odin_contact_opts['odin_whatsapp']; ?></li>
+						<li><ion-icon name="mail-outline"></ion-icon><?php echo $odin_contact_opts['odin_email']; ?></li>
+					</ul>
 				</div>
 				<div class="col-12 col-md-3">
 					<h3>Redes Sociais</h3>
-    				<?php $odin_contact_opts = get_option( 'odin_contact' ); ?>
-					<p><?php echo $odin_contact_opts['odin_telefone']; ?></p>
+					<div id="redes-sociais">
+						<a href="<?php echo $odin_contact_opts['odin_whatsapp']; ?>">
+							<ion-icon name="logo-whatsapp"></ion-icon>
+						</a>
+						<a href="<?php echo $odin_contact_opts['odin_instagram']; ?>">
+							<ion-icon name="logo-instagram"></ion-icon>
+						</a>
+						<a href="<?php echo $odin_contact_opts['odin_linkedin']; ?>">
+							<ion-icon name="logo-linkedin"></ion-icon>
+						</a>
+						<a href="<?php echo $odin_contact_opts['odin_facebook']; ?>">
+							<ion-icon name="logo-facebook"></ion-icon>
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -55,6 +72,8 @@
 		</div>
 	</section>
 
+	<script  type = "module"  src = "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script> 
+	<script  nomodule  src = "https://unpkg .com/ionicons@7.1.0/dist/ionicons/ionicons.js"> </script>
 	<?php wp_footer(); ?>
 </body>
 </html>
