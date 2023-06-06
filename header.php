@@ -18,6 +18,7 @@
 		<link href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.ico" rel="shortcut icon" />
 	<?php endif; ?>
 	<?php $odin_colors_opts = get_option( 'odin_colors' ); ?>
+	<?php $odin_fonts_opts = get_option( 'odin_fonts' ); ?>
 	<style>
 		:root{
 			--background-color: <?php echo $odin_colors_opts['background_color']; ?>;
@@ -35,6 +36,15 @@
 			--link-hover-color: <?php echo $odin_colors_opts['link_hover_color']; ?>;
 			--link-contrast-color: <?php echo $odin_colors_opts['link_color']; ?>;
 			--link-contrast-hover-color: <?php echo $odin_colors_opts['link_hover_color']; ?>;
+			--font-base: <?php echo $odin_fonts_opts['font_base']; ?>px;
+			--font-title-h1: <?php echo $odin_fonts_opts['font_title_h1']; ?>px;
+			--font-title-h2: <?php echo $odin_fonts_opts['font_title_h2']; ?>px;
+			--font-title-h3: <?php echo $odin_fonts_opts['font_title_h3']; ?>px;
+			--font-title-h4: <?php echo $odin_fonts_opts['font_title_h4']; ?>px;
+			--font-title-h5: <?php echo $odin_fonts_opts['font_title_h5']; ?>px;
+			--font-title-h6: <?php echo $odin_fonts_opts['font_title_h6']; ?>px;
+			--font-small: <?php echo $odin_fonts_opts['font_small']; ?>px;
+			--font-large: <?php echo $odin_fonts_opts['font_large']; ?>px;
 		}
 	</style>
 	<?php wp_head(); ?>

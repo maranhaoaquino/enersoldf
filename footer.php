@@ -14,8 +14,12 @@
 			<div class="row">
 				<div class="col-12 col-md-6">
 					<h3>Solicite seu orçamento gratuito agora</h3>
+					<?php echo odin_contact_form()->render(); ?>
 				</div>
-				<div class="col-12 col-md-6"></div>
+				<div class="col-12 col-md-6">
+					<?php $imagem_form = get_page_by_path('contato')->ID; ?>
+					<img  src="<?php the_field_cmb2('imagem_contact_form', $imagem_form) ?>">
+				</div>
 			</div>
 		</div>
 	</section>

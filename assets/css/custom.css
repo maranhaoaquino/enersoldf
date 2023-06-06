@@ -2,14 +2,48 @@
 body{
     background-color: var(--background-color);
     color: var(--text-color);
+    font-size: var(--font-base);
 }
 
 h1,h2,h3,h4,h5,h6 {
     color: var(--title-color);
 }
 
+h1{
+    font-size: var(--font-title-h1);
+}
+
+h2{
+    font-size: var(--font-title-h2);
+}
+
+h3{
+    font-size: var(--font-title-h3);
+}
+
+h4{
+    font-size: var(--font-title-h4);
+}
+
+h5{
+    font-size: var(--font-title-h5);
+}
+
+h6{
+    font-size: var(--font-title-h6);
+}
+
 p{
     color: var(--text-color);
+    font-size: var(--font-base);
+}
+
+large{
+    font-size: var(--font-large);
+}
+
+small{
+    font-size: var(--font-small);
 }
 
 /*Header*/

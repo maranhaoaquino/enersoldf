@@ -46,8 +46,8 @@ require_once get_template_directory() . '/core/classes/class-thumbnail-resizer.p
 require_once get_template_directory() . '/core/classes/class-post-type.php';
 require_once get_template_directory() . '/core/classes/class-taxonomy.php';
 require_once get_template_directory() . '/core/classes/class-metabox.php';
-// require_once get_template_directory() . '/core/classes/abstracts/abstract-front-end-form.php';
-//require_once get_template_directory() . '/core/classes/class-contact-form.php';
+require_once get_template_directory() . '/core/classes/abstracts/abstract-front-end-form.php';
+require_once get_template_directory() . '/core/classes/class-contact-form.php';
 // require_once get_template_directory() . '/core/classes/class-post-form.php';
 // require_once get_template_directory() . '/core/classes/class-user-meta.php';
 // require_once get_template_directory() . '/core/classes/class-post-status.php';
@@ -375,6 +375,10 @@ if (!function_exists( 'odin_theme_settings' ) ){
                 'id' => 'odin_colors',
                 'title' => __( 'Cores do Tema', 'odin' )
 			),
+			array(
+                'id' => 'odin_fonts',
+                'title' => __( 'Tamanho das Fonts', 'odin' )
+			),
         )
     );
 
@@ -570,6 +574,75 @@ if (!function_exists( 'odin_theme_settings' ) ){
                         'description' => __( 'Cor dos Links Clicados em fundo colorido', 'odin' ),
                     ),
 				)
+			),
+			'odin_fonts_fields_section' => array(
+				'tab'   => 'odin_fonts',
+				'title' => __( 'Tamanho das Fonts', 'odin' ),
+				'fields' => array(
+					array(
+						'id'          => 'font_base',
+						'label'       => __( 'Tamanho da fonte dos textos', 'odin' ),
+						'type'        => 'text',
+						'default'     => '16',
+						'description' => __( 'Tamanho em px.', 'odin' ),
+					),
+					array(
+						'id'          => 'font_title_h1',
+						'label'       => __( 'Tamanho do Titulo H1', 'odin' ),
+						'type'        => 'text',
+						'default'     => '40',
+						'description' => __( 'Tamanho em px.', 'odin' ),
+					),
+					array(
+						'id'          => 'font_title_h2',
+						'label'       => __( 'Tamanho do Titulo H2', 'odin' ),
+						'type'        => 'text',
+						'default'     => '36',
+						'description' => __( 'Tamanho em px.', 'odin' ),
+					),
+					array(
+						'id'          => 'font_title_h3',
+						'label'       => __( 'Tamanho do Titulo H3', 'odin' ),
+						'type'        => 'text',
+						'default'     => '32',
+						'description' => __( 'Tamanho em px.', 'odin' ),
+					),
+					array(
+						'id'          => 'font_title_h4',
+						'label'       => __( 'Tamanho do Titulo H4', 'odin' ),
+						'type'        => 'text',
+						'default'     => '28',
+						'description' => __( 'Tamanho em px.', 'odin' ),
+					),
+					array(
+						'id'          => 'font_title_h5',
+						'label'       => __( 'Tamanho do Titulo H5', 'odin' ),
+						'type'        => 'text',
+						'default'     => '24',
+						'description' => __( 'Tamanho em px.', 'odin' ),
+					),
+					array(
+						'id'          => 'font_title_h6',
+						'label'       => __( 'Tamanho do Titulo H6', 'odin' ),
+						'type'        => 'text',
+						'default'     => '20',
+						'description' => __( 'Tamanho em px.', 'odin' ),
+					),
+					array(
+						'id'          => 'font_small',
+						'label'       => __( 'Tamanho do Small', 'odin' ),
+						'type'        => 'text',
+						'default'     => '14',
+						'description' => __( 'Tamanho em px.', 'odin' ),
+					),
+					array(
+						'id'          => 'font_large',
+						'label'       => __( 'Tamanho do Large', 'odin' ),
+						'type'        => 'text',
+						'default'     => '18',
+						'description' => __( 'Tamanho em px.', 'odin' ),
+					),
+				)
 			)
 		)
 	);
@@ -679,3 +752,68 @@ function odin_catalogo_taxonomy() {
 }
 
 add_action( 'init', 'odin_catalogo_taxonomy', 1 );
+
+/**
+ * Formulario de contato
+ */
+
+function odin_contact_form() {
+	$form = new Odin_Contact_Form(
+        'form_id',
+        'contato@enersolardf.com',
+        array('gleddavi33@gmail.com'),
+    );
+
+	$form->set_fields(
+		array(
+			array(
+				'fields' => array(
+					array(
+						'id'          => 'sender_name',
+						'label'       => array(
+							'text'  => __( 'Nome', 'odin' ),
+							'class' => 'input-contact-form'
+						),
+						'type'        => 'text',
+						'required'    => true,
+						'attributes'  => array(
+							'placeholder' => __( 'Digite o seu nome' )
+						)
+					),
+					array(
+						'id'          => 'sender_email', // Obrigatório
+						'label'       => array(
+							'text'  => __( 'E-mail', 'odin' ), // Obrigatório
+							'class' => 'input-contact-form'
+						),
+						'type'        => 'email', // Obrigatório
+						'required'    => true, // Opcional (bool)
+						'attributes'  => array( // Opcional (html input elements)
+							'placeholder' => __( 'Digite o seu e-mail!' )
+						),
+					),
+					array(
+						'id'          => 'sender_telefone', // Obrigatório
+						'label'       => array(
+							'text'  => __( 'Whatsapp', 'odin' ), // Obrigatório
+							'class' => 'input-contact-form'
+						),
+						'type'        => 'text', // Obrigatório
+						'required'    => true, // Opcional (bool)
+						'attributes'  => array( // Opcional (html input elements)
+							'placeholder' => __( 'Digite seu número do whatsapp' )
+						),
+					),
+				)
+			)
+		)
+	);
+
+	$form->set_subject( __( 'Formulario de contato: Gostaria de um orçamento [sender_name] <[sender_email]>', 'odin' ) );
+
+	$form->set_reply_to( 'sender_email' );
+
+    return $form;
+}
+
+add_action( 'init', array( odin_contact_form(), 'init' ), 1 );

@@ -434,7 +434,7 @@ abstract class Odin_Front_End_Form {
 		}
 
 		$html = sprintf( '<div class="form-group odin-form-group-%s">', $id );
-		$html .= sprintf( '<label for="%s"%s>%s%s</label>', $id, $this->process_label_class( $label['class'] ), $label['text'], $this->required_field_alert( $attributes ) );
+		$html .= sprintf( '<label for="%s"%s>%s%s</label>', $id, $this->process_label_class( $attributes['class'] ), $label['text'], $this->required_field_alert( $attributes ) );
 		$html .= sprintf( '<textarea id="%1$s" name="%1$s"%2$s>%3$s</textarea>', $id, $this->process_attributes( $attributes ), $default );
 		$html .= ! empty( $description ) ? '<span class="help-block">' . $description . '</span>' : '';
 		$html .= '</div>';

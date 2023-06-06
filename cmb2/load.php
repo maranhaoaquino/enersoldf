@@ -11,6 +11,7 @@ function the_field_cmb2($key, $page_id = 0){
 
 require_once get_template_directory() . '/cmb2/home.php';
 require_once get_template_directory() . '/cmb2/faq.php';
+require_once get_template_directory() . '/cmb2/contato.php';
 require_once get_template_directory() . '/cmb2/single-produto.php';
 require_once get_template_directory() . '/cmb2/single-servicos.php';
 
