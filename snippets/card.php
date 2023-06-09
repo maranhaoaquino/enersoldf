@@ -9,7 +9,7 @@
             <h3><?php the_title();?></h3>
         </div>
         <div class="orcamento-card">
-            <a class="btn btn-primary" href="">Orçamento</a>
+            <a class="btn btn-primary card--btn" href="">Orçamento <ion-icon name="logo-whatsapp"></ion-icon></a>
         </div>
     </div>
 </div>

@@ -77,6 +77,16 @@ a:hover{
 #header-mobile{
     background-color: var(--background-header-color);
 }
+#menu-principal a{
+    color: var(--link-contrast-color)
+}
+#menu-principal li{
+    display: flex;
+    align-items: center;
+}
+#menu-principal a:hover{
+    color: var(--link-contrast-hover-color);
+}
 
 /*Home*/
 #produtos{
@@ -85,6 +95,14 @@ a:hover{
 
 #faq-home{
     background: linear-gradient(180deg, var(--primary-light-color), var(--primary-color));
+}
+
+.btn-principal{
+    background-color: var(--secondary-color);
+    color: var(--link-contrast-color);
+    width: 60%;
+    border-color: var(--secondary-color);
+    border-radius: 20px;
 }
 
 /*Card*/
@@ -117,6 +135,19 @@ a:hover{
     display: flex;
     justify-content: center;
 }
+.card--btn{
+    width: 100%;
+    border-radius: 20px;
+    background-color: var(--secondary-color);
+    color: var(--link-contrast-color);
+    font-weight: 500;
+    border-color: var(--secondary-color);
+}
+
+.card--btn:hover{
+    background-color: var(--secondary-bold-color);
+    border-color: var(--secondary-bold-color);
+}
 
 /*Faq*/
 .details-faq{
@@ -132,10 +163,52 @@ a:hover{
     background-position: center;
 }
 
+
 /*Footer*/
 #orcamento{
     background-color: var(--primary-light-color);
 }
+
+#orcamento form{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 100%;
+}
+
+#orcamento fieldset{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 100%;
+    justify-content: center;
+}
+
+#orcamento fieldset div{
+    width: 100%;
+    color: var(--link-contrast-color);
+}
+
+#orcamento fieldset div input{
+    background-color: rgba(217, 217, 217, .2);
+    border: 2px solid #fff;
+    border-radius: 0;
+}
+
+#orcamento fieldset div input::placeholder{
+    color: rgba(255, 255, 255, .5);
+}
+
+#orcamento form .btn-group{
+    width: 60%;
+}
+
+#orcamento form .btn-group button{
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    border-radius: 20px;
+}
+
 #footer{
     background-color: var(--background-footer-color);
 }

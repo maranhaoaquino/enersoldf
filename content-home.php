@@ -65,8 +65,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12">
-                <a class="btn btn-primary" href="/categoria-produtos/todos-produtos/">Conheça nossos serviços</a>
+            <div class="col-12 d-flex justify-content-center">
+                <a class="btn btn-primary btn-principal" href="/categoria-produtos/todos-produtos/">Conheça nossos serviços</a>
             </div>
         </div>
     </div>
@@ -100,8 +100,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12">
-                <a class="btn btn-primary" href="/categoria-servico/todos-servicos/">Veja todos os produtos</a>
+            <div class="col-12 d-flex justify-content-center">
+                <a class="btn btn-primary btn-principal" href="/categoria-servico/todos-servicos/">Veja todos os produtos</a>
             </div>
         </div>
     </div>
@@ -119,12 +119,14 @@
                 <h2>Economize até <span class="primary--color">95%</span> do valor da sua conta de energia com sua própria usina solar fotovoltaica.</h2>
             </div>
         </div>
-        <div class="row gap-4">
+        <div class="row gap-4 mt-4">
             <?php foreach($vantagens as $vantagem) { ?>
                 <div class="col-6 col-md-3">
-                    <img class="img-slides" src="<?php echo $vantagem['img_vantagem']; ?>">
-                    <h4><?php echo $vantagem['title_vantagem']; ?></h4>
-                    <p><?php echo $vantagem['description_vantagem']; ?></p>
+                    <div class="item-vantagem">
+                        <img class="img-slides" src="<?php echo $vantagem['img_vantagem']; ?>">
+                        <h4><?php echo $vantagem['title_vantagem']; ?></h4>
+                        <p><?php echo $vantagem['description_vantagem']; ?></p>
+                    </div>
                 </div>
             <?php } ?>
         </div>
