@@ -10,7 +10,7 @@
                 <?php $faq = get_field_cmb2('faq'); ?>
                 <div id="faq-box">
                     <?php foreach($faq as $pergunta) { ?>
-                        <details>
+                        <details class="details-faq">
                             <summary><?php echo $pergunta['pergunta_faq'] ?></summary>
                             <p><?php echo $pergunta['resposta_faq'] ?></p>
                         </details>

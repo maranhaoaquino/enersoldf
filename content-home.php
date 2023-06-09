@@ -144,7 +144,7 @@
                 <h2 class="link-contrast-color">Perguntas Frequentes</h2>
                 <div id="faq-box">
                     <?php foreach($faq as $pergunta) { ?>
-                        <details>
+                        <details class="details-faq">
                             <summary><?php echo $pergunta['pergunta_faq'] ?></summary>
                             <p><?php echo $pergunta['resposta_faq'] ?></p>
                         </details>
