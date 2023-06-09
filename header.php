@@ -34,8 +34,8 @@
 			--text-color: <?php echo $odin_colors_opts['text_color']; ?>;
 			--link-color: <?php echo $odin_colors_opts['link_color']; ?>;
 			--link-hover-color: <?php echo $odin_colors_opts['link_hover_color']; ?>;
-			--link-contrast-color: <?php echo $odin_colors_opts['link_color']; ?>;
-			--link-contrast-hover-color: <?php echo $odin_colors_opts['link_hover_color']; ?>;
+			--link-contrast-color: <?php echo $odin_colors_opts['link_contrast_color']; ?>;
+			--link-contrast-hover-color: <?php echo $odin_colors_opts['link_contrast_hover_color']; ?>;
 			--font-base: <?php echo $odin_fonts_opts['font_base']; ?>px;
 			--font-title-h1: <?php echo $odin_fonts_opts['font_title_h1']; ?>px;
 			--font-title-h2: <?php echo $odin_fonts_opts['font_title_h2']; ?>px;
@@ -109,7 +109,7 @@
 								);
 							?>
 							<?php $odin_contact_opts = get_option( 'odin_contact' ); ?>
-							<a href="<?php echo $odin_contact_opts['odin_whatsapp']; ?>">
+							<a class="btn btn-primary" href="<?php echo $odin_contact_opts['odin_whatsapp']; ?>">
 								Orçamento <ion-icon name="logo-whatsapp"></ion-icon>
 							</a>
 						</nav>
@@ -159,9 +159,6 @@
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 							</button>
-							<a class="navbar-brand visible-xs-block" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-								<?php bloginfo( 'name' ); ?>
-							</a>
 						</div>
 						<nav class="collapse navbar-collapse navbar-main-navigation" role="navigation">
 							<?php

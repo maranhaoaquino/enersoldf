@@ -39,7 +39,7 @@
     <div class="container">
         <div class="row gy-4">
             <div class="col-12 text-center">
-                <span>Conheça nossas soluções</span>
+                <span class="secondary--color">Conheça nossas soluções</span>
                 <h2>Energia solar para todos</h2>
             </div>
             <?php
@@ -66,7 +66,7 @@
                 </div>
             </div>
             <div class="col-12">
-                <a href="/categoria-produtos/todos-produtos/">Conheça nossos serviços</a>
+                <a class="btn btn-primary" href="/categoria-produtos/todos-produtos/">Conheça nossos serviços</a>
             </div>
         </div>
     </div>
@@ -75,7 +75,7 @@
     <div class="container">
         <div class="row gy-4">
             <div class="col-12 text-center">
-                <h2>Nossos Produtos</h2>
+                <h2 class="link-contrast-color">Nossos Produtos</h2>
             </div>
             <?php
                 $args = array (
@@ -101,7 +101,7 @@
                 </div>
             </div>
             <div class="col-12">
-                <a href="/categoria-servico/todos-servicos/">Veja todos os produtos</a>
+                <a class="btn btn-primary" href="/categoria-servico/todos-servicos/">Veja todos os produtos</a>
             </div>
         </div>
     </div>
@@ -115,15 +115,15 @@
                     <img  src="<?php the_field_cmb2('img_vantagens') ?>">
                 <?php } ?>
             </div>
-            <div class="col-12 col-md-8">
-                <h2>Economize até <span>95%</span> do valor da sua conta de energia com sua própria usina solar fotovoltaica.</h2>
+            <div class="col-12 col-md-8 d-flex align-items-center">
+                <h2>Economize até <span class="primary--color">95%</span> do valor da sua conta de energia com sua própria usina solar fotovoltaica.</h2>
             </div>
         </div>
         <div class="row gap-4">
             <?php foreach($vantagens as $vantagem) { ?>
-                <div class="col-6 col-md-4">
+                <div class="col-6 col-md-3">
                     <img class="img-slides" src="<?php echo $vantagem['img_vantagem']; ?>">
-                    <h3><?php echo $vantagem['title_vantagem']; ?></h3>
+                    <h4><?php echo $vantagem['title_vantagem']; ?></h4>
                     <p><?php echo $vantagem['description_vantagem']; ?></p>
                 </div>
             <?php } ?>
@@ -140,8 +140,8 @@
                 <img  src="<?php the_field_cmb2('imagem_faq', $perguntas) ?>">
             </div>
             <div class="col-12 col-md-8">
-                <span>Tire suas duvidas</span>
-                <h2>Perguntas Frequentes</h2>
+                <span class="secondary--color">Tire suas duvidas</span>
+                <h2 class="link-contrast-color">Perguntas Frequentes</h2>
                 <div id="faq-box">
                     <?php foreach($faq as $pergunta) { ?>
                         <details>

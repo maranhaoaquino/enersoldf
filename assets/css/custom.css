@@ -46,6 +46,30 @@ small{
     font-size: var(--font-small);
 }
 
+img{
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: var(--link-color);
+}
+
+a:hover{
+    color: var(--link-hover-color);
+}
+
+.link-contrast-color{
+    color: var(--link-contrast-color);
+}
+
+.primary--color{
+    color: var(--primary-color);
+}
+
+.secondary--color{
+    color: var(--secondary-color);
+}
 /*Header*/
 #header{
     background-color: var(--background-header-color);
@@ -61,6 +85,34 @@ small{
 
 #faq-home{
     background: linear-gradient(180deg, var(--primary-light-color), var(--primary-color));
+}
+
+/*Card*/
+.card{
+    align-items: center;
+    border-radius: 24px;
+    border: none;
+}
+.card-header{
+    padding: 0;
+}
+.card-header img{
+    border-radius: 24px 24px 0 0;
+}
+.card-body{
+    width: 100%;
+    padding: 10px;
+}
+.orcamento-card{
+    display: flex;
+    justify-content: center;
+}
+
+/*Blog*/
+.img-post{
+    height: 300px;
+    background-size: cover;
+    background-position: center;
 }
 
 /*Footer*/

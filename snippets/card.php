@@ -4,7 +4,12 @@
             <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
         </a>
     </div>
-    <div class="description-card">
-        <h5><?php the_title();?></h5>
+    <div class="card-body">
+        <div class="description-card text-center">
+            <h3><?php the_title();?></h3>
+        </div>
+        <div class="orcamento-card">
+            <a class="btn btn-primary" href="">Orçamento</a>
+        </div>
     </div>
 </div>

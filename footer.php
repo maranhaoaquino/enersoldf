@@ -11,9 +11,9 @@
 ?>
 	<section id="orcamento" class="py-5">
 		<div class="container">
-			<div class="row">
+			<div class="row gy-4">
 				<div class="col-12 col-md-6">
-					<h3>Solicite seu orçamento gratuito agora</h3>
+					<h3 class="link-contrast-color">Solicite seu orçamento gratuito agora</h3>
 					<?php echo odin_contact_form()->render(); ?>
 				</div>
 				<div class="col-12 col-md-6">
@@ -26,8 +26,8 @@
 
 	<footer id="footer" class="py-5" role="contentinfo">
 		<div class="container">
-			<div class="row">
-				<div class="col-12 col-md-4">
+			<div class="row gy-4">
+				<div id="logo-footer" class="col-12 col-md-4">
 					<?php if(has_custom_logo()){ ?>
 						<?php odin_the_custom_logo(); ?>
 					<?php } else { ?>
@@ -38,16 +38,16 @@
 						</div>
 					<?php } ?>
 				</div>
-				<div class="col-12 col-md-3">
-					<h3>Informações</h3>
+				<div id="contato-footer" class="col-12 col-md-3">
+					<h4 class="secondary--color">Informações</h4>
 					<ul id="informacoes-contato">
 						<?php $odin_contact_opts = get_option( 'odin_contact' ); ?>
 						<li><ion-icon name="call-outline"></ion-icon><?php echo $odin_contact_opts['odin_telefone']; ?> | <ion-icon name="logo-whatsapp"></ion-icon><?php echo $odin_contact_opts['odin_whatsapp']; ?></li>
 						<li><ion-icon name="mail-outline"></ion-icon><?php echo $odin_contact_opts['odin_email']; ?></li>
 					</ul>
 				</div>
-				<div class="col-12 col-md-3">
-					<h3>Redes Sociais</h3>
+				<div id="redes-sociais-footer" class="col-12 col-md-3">
+					<h4 class="secondary--color">Redes Sociais</h4>
 					<div id="redes-sociais">
 						<a href="<?php echo $odin_contact_opts['odin_whatsapp']; ?>">
 							<ion-icon name="logo-whatsapp"></ion-icon>
