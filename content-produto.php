@@ -3,30 +3,37 @@
         <div class="col-12 col-md-6">
             <div class="xzoom-container">
                 <img src="<?php the_post_thumbnail_url(); ?>" alt="" width="100%" class="xzoom" id="xzoom-default">
-                <div class="xzoom-thumbs">
+                <div class="xzoom-thumbs owl-carousel owl-theme">
                     <a href="<?php the_post_thumbnail_url(); ?>">
-                        <img src="<?php the_post_thumbnail_url(); ?>" width="80" class="xzoom-gallery">
+                        <img src="<?php the_post_thumbnail_url(); ?>" class="xzoom-gallery">
                     </a>
                     <?php $thumbs = get_field_cmb2('thumb_produtos'); ?>
                     <?php foreach($thumbs as $thumb){ ?>
                         <a href="<?php echo $thumb; ?>">
-                            <img src="<?php echo $thumb; ?>" width="80" class="xzoom-gallery">
+                            <img src="<?php echo $thumb; ?>" class="xzoom-gallery">
                         </a>
                     <?php } ?>
                 </div>
             </div>
         </div>
         <div class="col-12 col-md-6">
-            <h1><?php the_title(); ?></h1>
-            <p><?php the_field_cmb2('small_description'); ?></p>
+            <div id="product-description">
+                <h1><?php the_title(); ?></h1>
+                <p><?php the_field_cmb2('small_description'); ?></p>
+                <div class="orcamento-card">
+                    <a class="btn btn-primary card--btn" href="">Orçamento <ion-icon name="logo-whatsapp"></ion-icon></a>
+                </div>
+            </div>
         </div>
         <div class="col-12">
-            <details open>
-                <summary>
-                    <h2>Descrição</h2>
-                </summary>
-                <p><?php the_content(); ?></p>
-            </details>
+            <div class="descricao-product">
+                <details open>
+                    <summary>
+                        <h2>Descrição</h2>
+                    </summary>
+                    <p><?php the_content(); ?></p>
+                </details>
+            </div>
         </div>
         <?php
             $args = array (
@@ -100,6 +107,20 @@
             1023:{
                 items:3,
                 margin: 30
+            }
+        }
+    });
+
+    $('.xzoom-thumbs').owlCarousel({
+        loop:false,
+        nav:true,
+        margin: 10,
+        responsive:{
+            0:{
+                items:2
+            },
+            712:{
+                items:3
             }
         }
     });

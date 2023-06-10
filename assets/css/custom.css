@@ -47,7 +47,7 @@ small{
 }
 
 img{
-    width: 100%;
+    max-width: 100%;
 }
 
 a{
@@ -197,6 +197,43 @@ a:hover{
     background-position: center;
 }
 
+/*Pagina do prouto*/
+.xzoom-container{
+    width: 100%;
+}
+.xzoom-thumbs{
+    margin-top: 16px;
+    padding: 8px;
+    box-shadow: 0 1px 4px rgb(0 0 0 / 20%);
+}
+#product-description{
+    margin-top: 25%;
+}
+
+.descricao-product{
+    margin-bottom: 16px;
+}
+
+.descricao-product summary {
+    border-bottom: 1px solid var(--text-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.descricao-product summary::after {
+    content: "+";
+    font-size: var(--font-title-h2);
+    font-weight: normal;
+    margin: 0 5px;
+    padding: 0;
+    width: 20px;
+    text-align: center;
+}
+
+.descricao-product details[open] summary::after {
+    content: "-";
+}
 
 /*Footer*/
 #orcamento{
@@ -252,4 +289,10 @@ a:hover{
 }
 #powered-by p{
     color: #fff;
+}
+
+@media only screen and (max-width: 711px){
+    #product-description{
+        margin-top: 0;
+    }
 }
