@@ -89,6 +89,24 @@ a:hover{
 }
 
 /*Home*/
+#slide-principal{
+    position: relative;
+    max-height: 450px;
+    overflow-y: hidden;
+}
+#grid-slider{
+    position: absolute;
+    top: 200px;
+}
+
+#grid-slider h2, #grid-slider p{
+    color: var(--link-contrast-color);
+}
+
+#grid-text{
+    margin-left: 100px;
+}
+
 #produtos{
     background-color: var(--primary-color);
 }
@@ -103,6 +121,22 @@ a:hover{
     width: 60%;
     border-color: var(--secondary-color);
     border-radius: 20px;
+}
+
+.item-vantagem{
+    border: 1px solid var(--text-color);
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    text-align: center;
+}
+.item-vantagem img{
+    width: 50%;
 }
 
 /*Card*/

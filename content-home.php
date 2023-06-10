@@ -9,9 +9,11 @@
                         <?php } else { ?>
                             <a href="<?php if(!empty($slide['link_slide'])) { ?><?php echo $slide['link_slide'] ?><?php } ?>">
                                 <img class="img-slides" src="<?php echo $slide['img_slide'] ?>">
-                                <div id="grid-slider">
-                                    <?php if(!empty($slide['title_slide'])) { ?><h2><?php echo $slide['title_slide'] ?></h2><?php } ?>
-                                    <?php if(!empty($slide['subtitle_slide'])) { ?><p><?php echo $slide['subtitle_slide'] ?></p><?php } ?>
+                                <div id="grid-slider" class="container">
+                                    <div id="grid-text">
+                                        <?php if(!empty($slide['title_slide'])) { ?><h2><?php echo $slide['title_slide'] ?></h2><?php } ?>
+                                        <?php if(!empty($slide['subtitle_slide'])) { ?><p><?php echo $slide['subtitle_slide'] ?></p><?php } ?>
+                                    </div>
                                 </div>
                             </a>
                         <?php } ?>
@@ -124,7 +126,7 @@
                 <div class="col-6 col-md-3">
                     <div class="item-vantagem">
                         <img class="img-slides" src="<?php echo $vantagem['img_vantagem']; ?>">
-                        <h4><?php echo $vantagem['title_vantagem']; ?></h4>
+                        <h6><?php echo $vantagem['title_vantagem']; ?></h6>
                         <p><?php echo $vantagem['description_vantagem']; ?></p>
                     </div>
                 </div>
