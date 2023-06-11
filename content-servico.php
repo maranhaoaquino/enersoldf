@@ -25,7 +25,13 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-6">
-                    <p><?php the_field_cmb2('destaque_textarea'); ?></p>
+                    <div id="product-description">
+                        <h3><?php the_title(); ?></h3>
+                        <p><?php the_field_cmb2('destaque_textarea'); ?></p>
+                        <div class="orcamento-card">
+                            <a class="btn btn-primary card--btn" href="">Orçamento <ion-icon name="logo-whatsapp"></ion-icon></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
