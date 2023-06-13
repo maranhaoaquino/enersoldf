@@ -78,7 +78,8 @@ a:hover{
     background-color: var(--background-header-color);
 }
 #menu-principal a{
-    color: var(--link-contrast-color)
+    color: var(--link-contrast-color);
+    font-size: var(--font-title-h5);
 }
 #menu-principal li{
     display: flex;
@@ -86,6 +87,14 @@ a:hover{
 }
 #menu-principal a:hover{
     color: var(--link-contrast-hover-color);
+}
+
+.btn-header{
+    background-color: var(--secondary-color);
+    color: var(--link-contrast-color);
+    padding: 5px 50px;
+    border-color: var(--secondary-color);
+    border-radius: 20px;
 }
 
 /*Home*/
@@ -197,6 +206,27 @@ a:hover{
     background-position: center;
 }
 
+/*Pagina de serviço*/
+#topo-img{
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 70px;
+    background-position: center;
+}
+
+#title-topo {
+    position: absolute;
+    bottom: -37px;
+    background-color: var(--background-color);
+    padding: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, .25);
+}
+
+#title-topo h1{
+    margin: 0px;
+}
+
 /*Pagina do prouto*/
 .xzoom-container{
     width: 100%;
@@ -283,6 +313,30 @@ a:hover{
 #footer{
     background-color: var(--background-footer-color);
 }
+#footer a{
+    color: var(--link-contrast-color);
+}
+#footer a:hover{
+    color: var(--link-contrast-hover-color);
+}
+#informacoes-contato{
+    list-style: none;
+    padding-left: 0;
+    color: var(--link-contrast-color);
+    font-size: var(--font-title-h6);
+}
+#informacoes-contato ion-icon{
+    margin-right: 5px;
+}
+#redes-sociais{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+#redes-sociais ion-icon{
+    font-size: var(--font-title-h3);
+}
 #powered-by{
     background-color: #0D1533;
     color: #fff;
@@ -291,8 +345,19 @@ a:hover{
     color: #fff;
 }
 
+/*mobile*/
 @media only screen and (max-width: 711px){
     #product-description{
         margin-top: 0;
+    }
+    /*Pagina de serviço*/
+    #topo-img{
+        height: 120px;
+        margin-bottom: 60px;
+    }
+
+    #title-topo{
+        bottom: -29px;
+        padding: 4px;
     }
 }

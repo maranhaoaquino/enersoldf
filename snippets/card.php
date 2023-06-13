@@ -7,6 +7,7 @@
     <div class="card-body">
         <div class="description-card text-center">
             <h3><?php the_title();?></h3>
+            <p><?php the_excerpt(); ?></p>
         </div>
         <div class="orcamento-card">
             <a class="btn btn-primary card--btn" href="">Orçamento <ion-icon name="logo-whatsapp"></ion-icon></a>

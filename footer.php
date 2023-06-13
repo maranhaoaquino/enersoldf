@@ -38,15 +38,17 @@
 						</div>
 					<?php } ?>
 				</div>
-				<div id="contato-footer" class="col-12 col-md-3">
+				<div id="contato-footer" class="col-12 col-md-4">
 					<h4 class="secondary--color">Informações</h4>
 					<ul id="informacoes-contato">
 						<?php $odin_contact_opts = get_option( 'odin_contact' ); ?>
-						<li><ion-icon name="call-outline"></ion-icon><?php echo $odin_contact_opts['odin_telefone']; ?> | <ion-icon name="logo-whatsapp"></ion-icon><?php echo $odin_contact_opts['odin_whatsapp']; ?></li>
+						<li><ion-icon name="pin"></ion-icon><?php echo $odin_contact_opts['odin_endereco']; ?></li>
+						<li><ion-icon name="logo-whatsapp"></ion-icon><?php echo $odin_contact_opts['odin_whatsapp']; ?></li>
+						<li><ion-icon name="call-outline"></ion-icon><?php echo $odin_contact_opts['odin_telefone']; ?></li>
 						<li><ion-icon name="mail-outline"></ion-icon><?php echo $odin_contact_opts['odin_email']; ?></li>
 					</ul>
 				</div>
-				<div id="redes-sociais-footer" class="col-12 col-md-3">
+				<div id="redes-sociais-footer" class="col-12 col-md-4">
 					<h4 class="secondary--color">Redes Sociais</h4>
 					<div id="redes-sociais">
 						<a href="<?php echo $odin_contact_opts['odin_whatsapp']; ?>">
