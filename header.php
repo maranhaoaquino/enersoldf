@@ -121,8 +121,8 @@
 
 	<header id="header-mobile" class="d-block d-md-none">
 		<div class="container">
-			<div class="row">
-				<div class="col-6">
+			<div class="row gy-3">
+				<div class="col-9">
 					<div class="page-header hidden-xs">
 						<?php if(has_custom_logo()){ ?>
 							<?php odin_the_custom_logo(); ?>
@@ -150,41 +150,38 @@
 						<?php endif; ?>
 					</div>
 				</div>
-				<div class="col-6">
-					<div id="main-navigation" class="navbar navbar-default">
+				<div class="col-3 d-flex align-items-center justify-content-center">
+					<div id="main-navigation" class="navbar navbar-default justify-content-center">
 						<div class="navbar-header">
 							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-navigation">
-							<span class="sr-only"><?php _e( 'Toggle navigation', 'odin' ); ?></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
+								<ion-icon name="menu"></ion-icon>
 							</button>
 						</div>
-						<nav class="collapse navbar-collapse navbar-main-navigation" role="navigation">
-							<?php
-								wp_nav_menu(
-									array(
-										'theme_location' => 'main-menu',
-										'depth'          => 2,
-										'container'      => false,
-										'menu_class'     => 'nav navbar-nav',
-										'fallback_cb'    => 'Odin_Bootstrap_Nav_Walker::fallback',
-										'walker'         => new Odin_Bootstrap_Nav_Walker()
-									)
-								);
-							?>
-							<form method="get" class="navbar-form navbar-right" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
-								<label for="navbar-search" class="sr-only">
-									<?php _e( 'Search:', 'odin' ); ?>
-								</label>
-								<div class="form-group">
-									<input type="search" value="<?php echo get_search_query(); ?>" class="form-control" name="s" id="navbar-search" />
-								</div>
-								<button type="submit" class="btn btn-default"><?php _e( 'Search', 'odin' ); ?></button>
-							</form>
-						</nav>
 					</div>
 				</div>
+				<nav class="collapse navbar-collapse navbar-main-navigation col-12" role="navigation">
+					<?php
+						wp_nav_menu(
+							array(
+								'theme_location' => 'main-menu',
+								'depth'          => 2,
+								'container'      => false,
+								'menu_class'     => 'nav navbar-nav',
+								'fallback_cb'    => 'Odin_Bootstrap_Nav_Walker::fallback',
+								'walker'         => new Odin_Bootstrap_Nav_Walker()
+							)
+						);
+					?>
+					<form method="get" class="navbar-form navbar-right" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
+						<label for="navbar-search" class="sr-only">
+							<?php _e( 'Search:', 'odin' ); ?>
+						</label>
+						<div class="form-group">
+							<input type="search" value="<?php echo get_search_query(); ?>" class="form-control" name="s" id="navbar-search" />
+						</div>
+						<button type="submit" class="btn btn-default"><?php _e( 'Search', 'odin' ); ?></button>
+					</form>
+				</nav>
 			</div>
 		</div>
 	</header>

@@ -76,6 +76,7 @@ a:hover{
 }
 #header-mobile{
     background-color: var(--background-header-color);
+    padding: 10px 0px;
 }
 #menu-principal a{
     color: var(--link-contrast-color);
@@ -341,12 +342,24 @@ a:hover{
     background-color: #0D1533;
     color: #fff;
 }
+#powered-by a{
+    color: #fff;
+}
+#powered-by a:hover{
+    color: #d9d9d9;
+}
 #powered-by p{
     color: #fff;
 }
 
 /*mobile*/
 @media only screen and (max-width: 711px){
+    #grid-slider {
+        top: 72px;
+    }
+    #grid-text {
+        margin-left: 4px;
+    }
     #product-description{
         margin-top: 0;
     }
