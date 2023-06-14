@@ -261,6 +261,9 @@ function odin_enqueue_scripts() {
 
 	// Jquery.
 	wp_enqueue_script( 'jquery-att', $template_url . '/assets/js/libs/jquery.min.js', array(), null, false );
+
+	// Custom script
+	wp_enqueue_script( 'custom-script', $template_url . '/assets/js/custom.js', array(), null, false );
 	
 	// General scripts.
 	if ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {

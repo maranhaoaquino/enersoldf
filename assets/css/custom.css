@@ -70,6 +70,7 @@ a:hover{
 .secondary--color{
     color: var(--secondary-color);
 }
+
 /*Header*/
 #header{
     background-color: var(--background-header-color);
@@ -96,6 +97,27 @@ a:hover{
     padding: 5px 50px;
     border-color: var(--secondary-color);
     border-radius: 20px;
+}
+#btn-menu-mobile{
+    border: none;
+    background: none;
+    color: var(--link-contrast-color);
+    font-size: var(--font-title-h2);
+}
+#navbarToggleExternalContent3 ul{
+    gap: 10px;
+    padding: 10px 0px;
+}
+#navbarToggleExternalContent3 ul li{
+    display: flex;
+    justify-content: center;
+}
+#navbarToggleExternalContent3 ul li a{
+    color: var(--link-contrast-color);
+    font-size: var(--font-title-h6);
+}
+#navbarToggleExternalContent3 ul li a:hover{
+    color: var(--link-contrast-hover-color);
 }
 
 /*Home*/
@@ -188,16 +210,15 @@ a:hover{
     border-color: var(--secondary-color);
 }
 
-.card--btn:hover{
-    background-color: var(--secondary-bold-color);
-    border-color: var(--secondary-bold-color);
-}
-
 /*Faq*/
 .details-faq{
     background-color: #d9d9d9;
     padding: 10px;
     border-radius: 4px;
+}
+
+.details-faq p{
+    margin-top: 10px;
 }
 
 /*Blog*/

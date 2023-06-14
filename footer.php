@@ -51,7 +51,15 @@
 				<div id="redes-sociais-footer" class="col-12 col-md-4">
 					<h4 class="secondary--color">Redes Sociais</h4>
 					<div id="redes-sociais">
-						<a href="<?php echo $odin_contact_opts['odin_whatsapp']; ?>">
+						<?php $odin_contact_opts = get_option( 'odin_contact' ); ?>
+						<?php if ($odin_contact_opts['odin_whatsapp']) :
+							$whatsapp = str_replace('(', '', $odin_contact_opts['odin_whatsapp']);
+							$whatsapp1 = str_replace(')', '', $whatsapp);
+							$whatsapp2 = str_replace('-', '', $whatsapp1);
+							$whatsapp3 = str_replace(' ', '', $whatsapp2);
+						?>
+						<?php endif; ?>
+						<a href="https://wa.me/55<?php echo $whatsapp3;?>?text=Ola!%20Gostaria%20de%20um%20orçamento">
 							<ion-icon name="logo-whatsapp"></ion-icon>
 						</a>
 						<a href="<?php echo $odin_contact_opts['odin_instagram']; ?>">

@@ -55,12 +55,6 @@
 	<?php if ( function_exists( 'wp_body_open' ) ) {
 		wp_body_open();
 	} ?>
-	
-	<a id="skippy" class="sr-only sr-only-focusable" href="#content">
-		<div class="container">
-			<span class="skiplink-text"><?php _e( 'Skip to content', 'odin' ); ?></span>
-		</div>
-	</a>
 
 	<header id="header" role="banner" class="d-none d-md-block py-3">
 		<div class="container">
@@ -109,7 +103,14 @@
 								);
 							?>
 							<?php $odin_contact_opts = get_option( 'odin_contact' ); ?>
-							<a class="btn btn-primary btn-header" href="<?php echo $odin_contact_opts['odin_whatsapp']; ?>">
+							<?php if ($odin_contact_opts['odin_whatsapp']) :
+								$whatsapp = str_replace('(', '', $odin_contact_opts['odin_whatsapp']);
+								$whatsapp1 = str_replace(')', '', $whatsapp);
+								$whatsapp2 = str_replace('-', '', $whatsapp1);
+								$whatsapp3 = str_replace(' ', '', $whatsapp2);
+							?>
+							<?php endif; ?>
+							<a class="btn btn-primary btn-header" href="https://wa.me/55<?php echo $whatsapp3;?>?text=Ola!%20Gostaria%20de%20um%20orçamento">
 								Orçamento <ion-icon name="logo-whatsapp"></ion-icon>
 							</a>
 						</nav>
@@ -153,13 +154,13 @@
 				<div class="col-3 d-flex align-items-center justify-content-center">
 					<div id="main-navigation" class="navbar navbar-default justify-content-center">
 						<div class="navbar-header">
-							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-navigation">
+							<button type="button" id="btn-menu-mobile" class="navbar-toggle" onclick="removeCollapse()" data-mdb-toggle="collapse" data-mdb-target="#navbarToggleExternalContent3" aria-controls="navbarToggleExternalContent3" aria-expanded="false" aria-label="Toggle navigation">
 								<ion-icon name="menu"></ion-icon>
 							</button>
 						</div>
 					</div>
 				</div>
-				<nav class="collapse navbar-collapse navbar-main-navigation col-12" role="navigation">
+				<nav class="collapse navbar-collapse navbar-main-navigation col-12" id="navbarToggleExternalContent3" role="navigation">
 					<?php
 						wp_nav_menu(
 							array(
@@ -172,15 +173,6 @@
 							)
 						);
 					?>
-					<form method="get" class="navbar-form navbar-right" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
-						<label for="navbar-search" class="sr-only">
-							<?php _e( 'Search:', 'odin' ); ?>
-						</label>
-						<div class="form-group">
-							<input type="search" value="<?php echo get_search_query(); ?>" class="form-control" name="s" id="navbar-search" />
-						</div>
-						<button type="submit" class="btn btn-default"><?php _e( 'Search', 'odin' ); ?></button>
-					</form>
 				</nav>
 			</div>
 		</div>
