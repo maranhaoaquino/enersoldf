@@ -59,7 +59,7 @@
 	<header id="header" role="banner" class="d-none d-md-block py-3">
 		<div class="container">
 			<div class="row">
-				<div class="col-3">
+				<div class="d-flex col-3 align-items-center">
 					<div class="page-header hidden-xs">
 						<?php if(has_custom_logo()){ ?>
 							<?php odin_the_custom_logo(); ?>

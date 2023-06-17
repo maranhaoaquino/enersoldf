@@ -107,6 +107,10 @@
     $('.slide--card').owlCarousel({
         loop:false,
         nav:true,
+        navText: [
+            "<i class='fa fa-chevron-left'></i>",
+            "<i class='fa fa-chevron-right'></i>"
+        ],
         responsive:{
             0:{
                 items:2,
@@ -127,6 +131,10 @@
         loop:false,
         nav:true,
         margin: 10,
+        navText: [
+            "<i class='fa fa-chevron-left'></i>",
+            "<i class='fa fa-chevron-right'></i>"
+        ],
         responsive:{
             0:{
                 items:2

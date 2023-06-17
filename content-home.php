@@ -27,7 +27,7 @@
             loop:false,
             nav:true,
             items: 1,
-            dots: true,
+            dots: false,
             video: true,
             merge:true,
             navText: [
@@ -121,9 +121,9 @@
                 <h2>Economize até <span class="primary--color">95%</span> do valor da sua conta de energia com sua própria usina solar fotovoltaica.</h2>
             </div>
         </div>
-        <div class="row gap-4 mt-4">
+        <div class="row gy-4 mt-4">
             <?php foreach($vantagens as $vantagem) { ?>
-                <div class="col-6 col-md-3">
+                <div class="col-6 col-md-4">
                     <div class="item-vantagem">
                         <img class="img-slides" src="<?php echo $vantagem['img_vantagem']; ?>">
                         <h6><?php echo $vantagem['title_vantagem']; ?></h6>
@@ -191,6 +191,10 @@
     $('.slide--card').owlCarousel({
         loop:false,
         nav:true,
+        navText: [
+            "<i class='fa fa-chevron-left'></i>",
+            "<i class='fa fa-chevron-right'></i>"
+        ],
         responsive:{
             0:{
                 items:2,

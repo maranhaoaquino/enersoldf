@@ -9,14 +9,16 @@
  * @since 2.2.0
  */
 ?>
-	<section id="orcamento" class="py-5">
+	<section id="orcamento" class="pt-5">
 		<div class="container">
 			<div class="row gy-4">
-				<div class="col-12 col-md-6">
-					<h3 class="link-contrast-color">Solicite seu orçamento gratuito agora</h3>
-					<?php echo odin_contact_form()->render(); ?>
+				<div class="col-12 col-md-6 d-flex align-items-center">
+					<div class="w-100">
+						<h3 class="link-contrast-color">Solicite seu orçamento gratuito agora</h3>
+						<?php echo odin_contact_form()->render(); ?>
+					</div>
 				</div>
-				<div class="col-12 col-md-6">
+				<div class="col-12 col-md-6 d-none d-md-block">
 					<?php $imagem_form = get_page_by_path('contato')->ID; ?>
 					<img  src="<?php the_field_cmb2('imagem_contact_form', $imagem_form) ?>">
 				</div>
@@ -27,7 +29,7 @@
 	<footer id="footer" class="py-5" role="contentinfo">
 		<div class="container">
 			<div class="row gy-4">
-				<div id="logo-footer" class="col-12 col-md-4">
+				<div id="logo-footer" class="col-12 col-md-4 d-flex align-items-center">
 					<?php if(has_custom_logo()){ ?>
 						<?php odin_the_custom_logo(); ?>
 					<?php } else { ?>

@@ -239,6 +239,10 @@ function odin_enqueue_scripts() {
 	//custom css
 	wp_enqueue_style( 'custom-style', $template_url . '/assets/css/custom.css');
 
+	//Fontawesome
+	wp_enqueue_style( 'fontawesome-css', $template_url . '/assets/css/fontawesome.min.css');
+	wp_enqueue_script( 'fontawesome-script', $template_url . '/assets/js/fontawesome.min.js', array(), null, false );
+
 	//Owl Css
 	wp_enqueue_style( 'owl-css', $template_url . '/assets/css/owl.carousel.min.css');
 	wp_enqueue_style( 'owl-theme', $template_url . '/assets/css/owl.theme.carousel.min.css');
@@ -418,16 +422,6 @@ if (!function_exists( 'odin_theme_settings' ) ){
 							'type' => 'email'
 						),
 						'description' => __( 'E-mail principal para aparecer no rodapé', 'odin' ), // Opcional
-					),
-					array(
-						'id'          => 'odin_form_email',
-						'label'       => __( 'Destinatario do Formulario', 'odin' ),
-						'type'        => 'text',
-						'attributes'  => array(
-							'placeholder' => __( 'exemplo@exemplo.com' ),
-							'type' => 'email'
-						),
-						'description' => __( 'E-mail para receber os contatos via formulario', 'odin' ), // Opcional
 					),
 					array(
 						'id'          => 'odin_endereco',

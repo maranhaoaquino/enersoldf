@@ -215,6 +215,7 @@ a:hover{
     background-color: #d9d9d9;
     padding: 10px;
     border-radius: 4px;
+    margin-bottom: 10px;
 }
 
 .details-faq p{
@@ -345,7 +346,11 @@ a:hover{
     list-style: none;
     padding-left: 0;
     color: var(--link-contrast-color);
-    font-size: var(--font-title-h6);
+    font-size: var(--font-large);
+    margin: 0px;
+}
+#informacoes-contato li{
+    margin-bottom: 10px;
 }
 #informacoes-contato ion-icon{
     margin-right: 5px;
@@ -373,6 +378,48 @@ a:hover{
     color: #fff;
 }
 
+.owl-carousel{
+    position: relative;
+}
+
+.owl-nav {
+    margin-top: 0 !important;
+    position: absolute;
+    top: 45%;
+    z-index: 9;
+    width: 100%;
+}
+
+.owl-nav .owl-prev {
+    left: 0;
+    position: absolute;
+}
+
+.owl-nav .owl-next {
+    right: 0;
+    position: absolute;
+}
+
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-prev {
+    width: 35px;
+    height: 35px;
+}
+
+.owl-nav i {
+    font-size: 35px;
+}
+
+/*Tamanho medio*/
+@media only screen and (min-width: 711px) and (min-width: 1100px){
+    #menu-principal a {
+        font-size: var(--font-large);
+    }
+    .btn-header{
+        padding: 5px 30px;
+    }
+}
+
 /*mobile*/
 @media only screen and (max-width: 711px){
     #grid-slider {
@@ -393,5 +440,15 @@ a:hover{
     #title-topo{
         bottom: -29px;
         padding: 4px;
+    }
+
+    .owl-carousel .owl-nav button.owl-next,
+    .owl-carousel .owl-nav button.owl-prev {
+        width: 15px;
+        height: 15px;
+    }
+
+    .owl-nav i {
+        font-size: 20px;
     }
 }
