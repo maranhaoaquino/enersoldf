@@ -383,9 +383,8 @@ a:hover{
 }
 
 .owl-nav {
-    margin-top: 0 !important;
     position: absolute;
-    top: 45%;
+    top: 30%;
     z-index: 9;
     width: 100%;
 }
@@ -406,8 +405,8 @@ a:hover{
     height: 35px;
 }
 
-.owl-nav i {
-    font-size: 35px;
+.owl-nav span {
+    font-size: 60px;
 }
 
 /*Tamanho medio*/

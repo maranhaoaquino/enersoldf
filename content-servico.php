@@ -16,15 +16,15 @@
             <div class="row gy-4">
                 <div class="col-12 col-md-6">
                     <div id="slide-servico" class="owl-carousel owl-theme">
-                        <div class="item">
-                            <img src="<?php the_post_thumbnail_url(); ?>">
+                            <div class="item">
+                                <img src="<?php the_post_thumbnail_url(); ?>">
+                            </div>
                             <?php $thumbs = get_field_cmb2('thumb_servico'); ?>
-                            <?php if(!empty($thumbs)){foreach($thumbs as $thumb){ ?>
+                            <?php if(!empty($thumbs)){ foreach($thumbs as $thumb){ ?>
                                 <div class="item">
                                     <img src="<?php echo $thumb; ?>">
                                 </div>
                             <?php }} ?>
-                        </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-6">
@@ -78,25 +78,17 @@
         </div>
     </div>
 </section>
-<script>
+<script type="text/javascript">
     $('#slide-servico').owlCarousel({
         loop:false,
         nav:true,
         items: 1,
         dots: false,
-        navText: [
-            "<i class='fa fa-chevron-left'></i>",
-            "<i class='fa fa-chevron-right'></i>"
-        ],
     });
 
     $('.slide--card').owlCarousel({
         loop:false,
         nav:true,
-        navText: [
-            "<i class='fa fa-chevron-left'></i>",
-            "<i class='fa fa-chevron-right'></i>"
-        ],
         responsive:{
             0:{
                 items:2,

@@ -19,6 +19,14 @@
 	<?php endif; ?>
 	<?php $odin_colors_opts = get_option( 'odin_colors' ); ?>
 	<?php $odin_fonts_opts = get_option( 'odin_fonts' ); ?>
+
+	<meta name="description" content="<?php bloginfo('description'); ?>">
+	<meta property="og:type" content="website"/>
+	<meta property="og:title" content="<?php bloginfo('name'); ?>"/>
+	<meta property="og:description" content="<?php bloginfo('description'); ?>" />
+	<meta property="og:url" content="<?php bloginfo('url'); ?>"/>
+	<!--<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/og-image.png"/>-->
+
 	<style>
 		:root{
 			--background-color: <?php echo $odin_colors_opts['background_color']; ?>;

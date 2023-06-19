@@ -814,3 +814,8 @@ function odin_contact_form() {
 }
 
 add_action( 'init', array( odin_contact_form(), 'init' ), 1 );
+
+function custom_excerpt_length( $length ) {
+	return 10;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
