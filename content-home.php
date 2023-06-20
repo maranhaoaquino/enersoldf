@@ -37,6 +37,18 @@
         });
     </script>
 <?php } ?>
+<?php
+    $args = array (
+        'post_type' => 'servico',
+        'orderby' => 'ID',
+        'order'   => 'DESC',
+        'nopaging' => false,
+        'posts_per_page' => '12',
+        'post_status' => 'publish'
+    );
+    $the_query = new WP_Query ( $args );
+?>
+<?php if(!empty($the_query)){ ?>
 <section id="servicos" class="py-5">
     <div class="container">
         <div class="row gy-4">
@@ -44,17 +56,6 @@
                 <span class="secondary--color">Conheça nossas soluções</span>
                 <h2>Energia solar para todos</h2>
             </div>
-            <?php
-                $args = array (
-                    'post_type' => 'servico',
-                    'orderby' => 'ID',
-                    'order'   => 'DESC',
-                    'nopaging' => false,
-                    'posts_per_page' => '12',
-                    'post_status' => 'publish'
-                );
-                $the_query = new WP_Query ( $args );
-            ?>
             <div class="col-12">
                 <div class="row">
                     <div class="owl-carousel owl-theme slide--card">
@@ -73,23 +74,25 @@
         </div>
     </div>
 </section>
+<?php } ?>
+<?php
+    $args = array (
+        'post_type' => 'produto',
+        'orderby' => 'ID',
+        'order'   => 'DESC',
+        'nopaging' => false,
+        'posts_per_page' => '12',
+        'post_status' => 'publish'
+    );
+    $the_query = new WP_Query ( $args );
+?>
+<?php if(!empty($the_query)){ ?>
 <section id="produtos" class="py-5">
     <div class="container">
         <div class="row gy-4">
             <div class="col-12 text-center">
                 <h2 class="link-contrast-color">Nossos Produtos</h2>
             </div>
-            <?php
-                $args = array (
-                    'post_type' => 'produto',
-                    'orderby' => 'ID',
-                    'order'   => 'DESC',
-                    'nopaging' => false,
-                    'posts_per_page' => '12',
-                    'post_status' => 'publish'
-                );
-                $the_query = new WP_Query ( $args );
-            ?>
             <div class="col-12">
                 <div class="row">
                     <div class="owl-carousel owl-theme slide--card">
@@ -108,6 +111,7 @@
         </div>
     </div>
 </section>
+<?php } ?>
 <?php $vantagens = get_field_cmb2('vantagens');  if(!empty($vantagens)) { ?>
 <section id="vantagens" class="py-5">
     <div class="container">
@@ -159,23 +163,24 @@
     </div>
 </section>
 <?php } ?>
+<?php
+    $args = array (
+        'post_type' => 'post',
+        'orderby' => 'ID',
+        'order'   => 'DESC',
+        'nopaging' => false,
+        'posts_per_page' => '3',
+        'post_status' => 'publish'
+    );
+    $the_query = new WP_Query ( $args );
+?>
+<?php if(!empty($the_query)){ ?>
 <section id="blog" class="py-5">
     <div class="container">
         <div class="row gy-4">
             <div class="col-12 text-center">
                 <h2>Explorar mais assuntos</h2>
             </div>
-            <?php
-                $args = array (
-                    'post_type' => 'post',
-                    'orderby' => 'ID',
-                    'order'   => 'DESC',
-                    'nopaging' => false,
-                    'posts_per_page' => '3',
-                    'post_status' => 'publish'
-                );
-                $the_query = new WP_Query ( $args );
-            ?>
             <div class="col-12">
                 <div class="row">
                     <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
@@ -187,6 +192,7 @@
         </div>
     </div>
 </section>
+<?php } ?>
 <script type="text/javascript">
     $('.slide--card').owlCarousel({
         loop:false,

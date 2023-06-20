@@ -6,8 +6,8 @@
     </div>
     <div class="card-body">
         <div class="description-card text-center">
-            <h3><?php the_title();?></h3>
-            <p><?php the_excerpt(); ?></p>
+            <h3 class="title-card"><?php the_title();?></h3>
+            <div class="description-card"><?php the_excerpt(); ?></div>
         </div>
         <div class="orcamento-card">
             <?php $odin_contact_opts = get_option( 'odin_contact' ); ?>

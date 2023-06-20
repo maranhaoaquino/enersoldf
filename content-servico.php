@@ -61,6 +61,7 @@
             );
             $the_query = new WP_Query ( $args );
         ?>
+        <?php if(!empty($the_query)){ ?>
         <div class="col-12">
             <div class="row gy-3">
                 <div class="col-12 text-center">
@@ -76,6 +77,7 @@
                 </div>
             </div>
         </div>
+        <?php } ?>
     </div>
 </section>
 <script type="text/javascript">

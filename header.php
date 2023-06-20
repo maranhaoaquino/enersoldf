@@ -131,7 +131,7 @@
 	<header id="header-mobile" class="d-block d-md-none">
 		<div class="container">
 			<div class="row gy-3">
-				<div class="col-9">
+				<div class="col-9 d-flex align-items-center">
 					<div class="page-header hidden-xs">
 						<?php if(has_custom_logo()){ ?>
 							<?php odin_the_custom_logo(); ?>
