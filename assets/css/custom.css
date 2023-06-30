@@ -458,8 +458,61 @@ a:hover{
 
 /*mobile*/
 @media only screen and (max-width: 711px){
+    body{
+        font-size: var(--font-base-mobile);
+    }
+    h1{
+        font-size: var(--font-title-h1-mobile);
+    }
+    
+    h2{
+        font-size: var(--font-title-h2-mobile);
+    }
+    
+    h3{
+        font-size: var(--font-title-h3-mobile);
+    }
+    
+    h4{
+        font-size: var(--font-title-h4-mobile);
+    }
+    
+    h5{
+        font-size: var(--font-title-h5-mobile);
+    }
+    
+    h6{
+        font-size: var(--font-title-h6-mobile);
+    }
+    
+    p{
+        font-size: var(--font-base-mobile);
+    }
+    
+    large{
+        font-size: var(--font-large-mobile);
+    }
+    
+    small{
+        font-size: var(--font-small-mobile);
+    }
+    #menu-principal a{
+        font-size: var(--font-title-h5-mobile);
+    }
+    #btn-menu-mobile{
+        font-size: var(--font-title-h2-mobile);
+    }
+    #navbarToggleExternalContent3 ul li a{
+        font-size: var(--font-title-h6-mobile);
+    }
+    .title-card{
+        font-size: var(--font-title-h5-mobile);
+    }
+    #redes-sociais ion-icon{
+        font-size: var(--font-title-h3-mobile);
+    }
     #grid-slider {
-        top: 72px;
+        top: 22px;
     }
     #grid-text {
         margin-left: 4px;

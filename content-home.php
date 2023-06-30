@@ -69,7 +69,7 @@
                 </div>
             </div>
             <div class="col-12 d-flex justify-content-center">
-                <a class="btn btn-primary btn-principal" href="/categoria-produtos/todos-produtos/">Conheça nossos serviços</a>
+                <a class="btn btn-primary btn-principal" href="/categoria-servico/todos-servicos/">Conheça nossos serviços</a>
             </div>
         </div>
     </div>
@@ -106,7 +106,7 @@
                 </div>
             </div>
             <div class="col-12 d-flex justify-content-center">
-                <a class="btn btn-primary btn-principal" href="/categoria-servico/todos-servicos/">Veja todos os produtos</a>
+                <a class="btn btn-primary btn-principal" href="/categoria-produtos/todos-produtos/">Veja todos os produtos</a>
             </div>
         </div>
     </div>
