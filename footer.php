@@ -30,14 +30,21 @@
 		<div class="container">
 			<div class="row gy-4">
 				<div id="logo-footer" class="col-12 col-md-4 d-flex align-items-center">
-					<?php if(has_custom_logo()){ ?>
-						<?php odin_the_custom_logo(); ?>
-					<?php } else { ?>
-						<div class="site-title">
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-								<?php bloginfo( 'name' ); ?>
-							</a>
-						</div>
+					<?php $odin_general_opts = get_option( 'odin_general' ); ?>
+					<?php if(!empty($odin_general_opts['footer_logo'])){ ?>
+						<a href="<?php get_home_url(); ?>" class="custom-logo-link" rel="home">
+							<img src="<?php echo $odin_general_opts['footer_logo']; ?>" class="custom-logo" alt="Enersolardf" decoding="async">
+						</a>
+					<?php } else{ ?>
+						<?php if(has_custom_logo()){ ?>
+							<?php odin_the_custom_logo(); ?>
+						<?php } else { ?>
+							<div class="site-title">
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+									<?php bloginfo( 'name' ); ?>
+								</a>
+							</div>
+						<?php } ?>
 					<?php } ?>
 				</div>
 				<div id="contato-footer" class="col-12 col-md-4">

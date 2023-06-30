@@ -25,7 +25,12 @@
 	<meta property="og:title" content="<?php bloginfo('name'); ?>"/>
 	<meta property="og:description" content="<?php bloginfo('description'); ?>" />
 	<meta property="og:url" content="<?php bloginfo('url'); ?>"/>
-	<!--<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/og-image.png"/>-->
+	<?php $odin_general_opts = get_option('odin_general'); ?>
+	<?php if(!empty($odin_general_opts['og_logo'])){ ?>
+	<meta property="og:image" content="<?php echo $odin_general_opts['og_logo']; ?>"/>
+	<meta property="og:image:width" content=”1200″/>
+	<meta property="og:image:height" content=”630″/>
+	<?php } ?>
 
 	<style>
 		:root{

@@ -1,8 +1,12 @@
 /*Configurações gerais*/
+html{
+    height: 100%;
+}
 body{
     background-color: var(--background-color);
     color: var(--text-color);
     font-size: var(--font-base);
+    height: 100%;
 }
 
 h1,h2,h3,h4,h5,h6 {

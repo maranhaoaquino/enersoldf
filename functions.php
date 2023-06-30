@@ -391,6 +391,24 @@ if (!function_exists( 'odin_theme_settings' ) ){
 
 	$settings->set_fields(
 		array(
+			'odin_general_fields_section' => array(
+				'tab'   => 'odin_general',
+				'title' => __( 'Configurações Gerais', 'odin' ),
+				'fields' => array(
+					array(
+						'id'          => 'footer_logo',
+						'label'       => __( 'Logo footer', 'odin' ),
+						'type'        => 'upload',
+						'description' => __( 'Logo diferente para o footer', 'odin' ),
+					),
+					array(
+						'id'          => 'og_logo',
+						'label'       => __( 'Logo para a Meta', 'odin' ),
+						'type'        => 'upload',
+						'description' => __( 'Logo que aparece quando compartilha no whatsapp, instagram e etc...', 'odin' ),
+					),
+				)
+			),
 			'odin_contact_fields_section' => array(
 				'tab'   => 'odin_contact',
 				'title' => __( 'Configurações de Contato', 'odin' ),
