@@ -21,4 +21,10 @@ function cmb2_fields_contato() {
             'url' => false,
         ],
     ]);
+
+    $cmb->add_field([
+        'name' => 'Link mapa',
+        'id' => 'map_contact',
+        'type' => 'text_url',
+    ]);
 }

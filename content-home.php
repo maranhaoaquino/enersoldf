@@ -182,7 +182,7 @@
                 <h2>Explorar mais assuntos</h2>
             </div>
             <div class="col-12">
-                <div class="row">
+                <div class="row gy-4">
                     <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
                         <?php include(TEMPLATEPATH . "/snippets/card-post.php"); ?>
                     <?php endwhile; else: endif; ?>
