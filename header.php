@@ -67,15 +67,6 @@
 			--font-title-h6-mobile: <?php echo $odin_fonts_opts['font_title_h6']-4; ?>px;
 			--font-small-mobile: <?php echo $odin_fonts_opts['font_small']-4; ?>px;
 			--font-large-mobile: <?php echo $odin_fonts_opts['font_large']-4; ?>px;
-			--font-base-mini: <?php echo $odin_fonts_opts['font_base']-6; ?>px;
-			--font-title-h1-mini: <?php echo $odin_fonts_opts['font_title_h1']-6; ?>px;
-			--font-title-h2-mini: <?php echo $odin_fonts_opts['font_title_h2']-6; ?>px;
-			--font-title-h3-mini: <?php echo $odin_fonts_opts['font_title_h3']-6; ?>px;
-			--font-title-h4-mini: <?php echo $odin_fonts_opts['font_title_h4']-6; ?>px;
-			--font-title-h5-mini: <?php echo $odin_fonts_opts['font_title_h5']-6; ?>px;
-			--font-title-h6-mini: <?php echo $odin_fonts_opts['font_title_h6']-6; ?>px;
-			--font-small-mini: <?php echo $odin_fonts_opts['font_small']-6; ?>px;
-			--font-large-mini: <?php echo $odin_fonts_opts['font_large']-6; ?>px;
 		}
 	</style>
 	<?php wp_head(); ?>

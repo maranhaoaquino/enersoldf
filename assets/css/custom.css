@@ -533,7 +533,7 @@ a:hover{
         font-size: var(--font-title-h3-mobile);
     }
     #grid-slider {
-        top: 5%;
+        top: 25%;
     }
     #product-description{
         margin-top: 0;
@@ -564,44 +564,7 @@ a:hover{
     .item-vantagem{
         min-height: 229px;
     }
-}
-@media only screen and (max-width: 564px){
-    body{
-        font-size: var(--font-base-mini);
-    }
-    h1{
-        font-size: var(--font-title-h1-mini);
-    }
-    
-    h2{
-        font-size: var(--font-title-h2-mini);
-    }
-    
-    h3{
-        font-size: var(--font-title-h3-mini);
-    }
-    
-    h4{
-        font-size: var(--font-title-h4-mini);
-    }
-    
-    h5{
-        font-size: var(--font-title-h5-mini);
-    }
-    
-    h6{
-        font-size: var(--font-title-h6-mini);
-    }
-    
-    p{
-        font-size: var(--font-base-mini);
-    }
-    
-    large{
-        font-size: var(--font-large-mini);
-    }
-    
-    small{
-        font-size: var(--font-small-mini);
+    #grid-text {
+        margin-left: 0px;
     }
 }

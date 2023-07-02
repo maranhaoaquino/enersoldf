@@ -1,5 +1,5 @@
 <?php $slide_principal = get_field_cmb2('slide_principal');  if(!empty($slide_principal)) { ?>
-    <section id="carousel">
+    <section id="carousel" class="d-none d-md-block">
         <div id="slide-principal" class="owl-carousel owl-theme">
             <?php foreach($slide_principal as $slide) { ?>
                 <?php if(!empty($slide['img_slide']) || !empty($slide['video_link'])) { ?>
@@ -22,8 +22,43 @@
             <?php } ?>
         </div>
     </section>
+    <section id="carousel-mobile" class="d-block d-md-none">
+        <div id="slide-principal-mobile" class="owl-carousel owl-theme">
+            <?php foreach($slide_principal as $slide) { ?>
+                <?php if(!empty($slide['img_mobile_slide']) || !empty($slide['video_link'])) { ?>
+                    <div class="item">
+                        <?php if (!empty($slide['video_link'])) { ?>
+                            <iframe class="img-slides" width="100%" height="100%" src="<?php echo $slide['video_link']; ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <?php } else { ?>
+                            <a href="<?php if(!empty($slide['link_slide'])) { ?><?php echo $slide['link_slide'] ?><?php } ?>">
+                                <img class="img-slides" src="<?php echo $slide['img_mobile_slide'] ?>">
+                                <div id="grid-slider" class="container">
+                                    <div id="grid-text">
+                                        <?php if(!empty($slide['title_slide'])) { ?><h2><?php echo $slide['title_slide'] ?></h2><?php } ?>
+                                        <?php if(!empty($slide['subtitle_slide'])) { ?><p><?php echo $slide['subtitle_slide'] ?></p><?php } ?>
+                                    </div>
+                                </div>
+                            </a>
+                        <?php } ?>
+                    </div>
+                <?php } ?>
+            <?php } ?>
+        </div>
+    </section>
     <script>
         $('#slide-principal').owlCarousel({
+            loop:false,
+            nav:true,
+            items: 1,
+            dots: false,
+            video: true,
+            merge:true,
+            navText: [
+                "<i class='fa fa-chevron-left'></i>",
+                "<i class='fa fa-chevron-right'></i>"
+            ],
+        });
+        $('#slide-mobile').owlCarousel({
             loop:false,
             nav:true,
             items: 1,
