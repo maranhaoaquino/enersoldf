@@ -132,7 +132,7 @@ a:hover{
 }
 #grid-slider{
     position: absolute;
-    top: 170px;
+    top: 30%;
 }
 
 #grid-slider h2, #grid-slider p{
@@ -468,7 +468,7 @@ a:hover{
 }
 
 /*Tamanho medio*/
-@media only screen and (min-width: 711px) and (min-width: 1100px){
+@media only screen and (min-width: 711px) and (max-width: 1100px){
     #menu-principal a {
         font-size: var(--font-large);
     }
@@ -533,10 +533,7 @@ a:hover{
         font-size: var(--font-title-h3-mobile);
     }
     #grid-slider {
-        top: 22px;
-    }
-    #grid-text {
-        margin-left: 4px;
+        top: 5%;
     }
     #product-description{
         margin-top: 0;
@@ -566,5 +563,45 @@ a:hover{
     }
     .item-vantagem{
         min-height: 229px;
+    }
+}
+@media only screen and (max-width: 564px){
+    body{
+        font-size: var(--font-base-mini);
+    }
+    h1{
+        font-size: var(--font-title-h1-mini);
+    }
+    
+    h2{
+        font-size: var(--font-title-h2-mini);
+    }
+    
+    h3{
+        font-size: var(--font-title-h3-mini);
+    }
+    
+    h4{
+        font-size: var(--font-title-h4-mini);
+    }
+    
+    h5{
+        font-size: var(--font-title-h5-mini);
+    }
+    
+    h6{
+        font-size: var(--font-title-h6-mini);
+    }
+    
+    p{
+        font-size: var(--font-base-mini);
+    }
+    
+    large{
+        font-size: var(--font-large-mini);
+    }
+    
+    small{
+        font-size: var(--font-small-mini);
     }
 }
