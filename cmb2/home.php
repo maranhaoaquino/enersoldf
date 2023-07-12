@@ -63,6 +63,12 @@ function cmb2_fields_home() {
     ]);
 
     $cmb->add_field([
+        'name' => 'Titulo Sessão Vantagens',
+        'id' => 'title_session_vantagens',
+        'type' => 'text',
+    ]);
+
+    $cmb->add_field([
         'name' => 'Imagem Sessão Vantagens',
         'id' => 'img_vantagens',
         'type' => 'file',
@@ -82,7 +88,6 @@ function cmb2_fields_home() {
           'remove_button' => 'Remover',
         ],
     ]);
-
     $cmb->add_group_field($vantagens, [
         'name' => 'Image',
         'id' => 'img_vantagem',

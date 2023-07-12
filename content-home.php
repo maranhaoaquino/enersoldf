@@ -157,7 +157,14 @@
                 <?php } ?>
             </div>
             <div class="col-12 col-md-8 d-flex align-items-center">
-                <h2>Economize até <span class="primary--color">95%</span> do valor da sua conta de energia com sua própria usina solar fotovoltaica.</h2>
+                <?php 
+                    $title_session_vantagens = get_field_cmb2('title_session_vantagens');
+                    if(!empty($title_session_vantagens)){ 
+                ?>
+                        <h2> <?php the_field_cmb2('title_session_vantagens'); ?></h2>
+                <?php } else { ?>
+                    <h2>Economize até <span class="primary--color">95%</span> do valor da sua conta de energia com sua própria usina solar fotovoltaica.</h2>
+                <?php } ?>
             </div>
         </div>
         <div class="row gy-4 mt-4">
@@ -183,8 +190,8 @@
                 <img  src="<?php the_field_cmb2('imagem_faq', $perguntas) ?>">
             </div>
             <div class="col-12 col-md-8">
-                <span class="secondary--color">Tire suas duvidas</span>
-                <h2 class="link-contrast-color">Perguntas Frequentes</h2>
+                <span class="secondary--color"><?php $subtitle_faq = get_field_cmb2('subtitle_faq_home', $perguntas); if(empty($title_faq)){echo "Tire suas dúvidas";}else{the_field_cmb2('subtitle_faq_home', $perguntas);}?></span>
+                <h2 class="link-contrast-color"><?php $title_faq = get_field_cmb2('title_faq_home', $perguntas); if(empty($title_faq)){echo "Perguntas Frequentes";}else{the_field_cmb2('title_faq_home', $perguntas);}?></h2>
                 <div id="faq-box">
                     <?php foreach($faq as $pergunta) { ?>
                         <details class="details-faq">

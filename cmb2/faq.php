@@ -22,6 +22,17 @@ function cmb2_fields_faq() {
         ],
     ]);
 
+    $cmb->add_field([
+        'name' => 'Titulo Pergutas Frequentes Home',
+        'id' => 'title_faq_home',
+        'type' => 'text',
+    ]);
+    $cmb->add_field([
+        'name' => 'Subtitulo Pergutas Frequentes Home',
+        'id' => 'subtitle_faq_home',
+        'type' => 'text',
+    ]);
+
     $faq = $cmb->add_field([
         'name' => 'Faq',
         'id' => 'faq',
