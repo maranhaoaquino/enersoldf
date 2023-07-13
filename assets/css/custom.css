@@ -132,15 +132,15 @@ a:hover{
 }
 #grid-slider{
     position: absolute;
+    left: 0;
+    right: 0;
     top: 30%;
+    margin: auto;
 }
 
-#grid-slider h2, #grid-slider p{
+#grid-slider h2{
     color: var(--link-contrast-color);
-}
-
-#grid-text{
-    margin-left: 100px;
+    text-align: center;
 }
 
 #produtos{
